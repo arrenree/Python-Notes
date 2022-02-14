@@ -4,7 +4,7 @@
 
 Floor Division
 
-```p
+```python
 7 // 4
 # 1
 # // = floor division. truncates decimal without rounding
@@ -13,7 +13,7 @@ Floor Division
 
 Modulo
 
-```p
+```python
 7 % 3
 # 3
 # % is mod = the remainder after division
@@ -23,14 +23,14 @@ Modulo
 
 Powers
 
-```p
+```python
 2 ** 3
 # 8
 ```
 
 Square Root
 
-```p
+```python
 4 ** 0.5
 # 2.0
 # 4 to the power of 0.5 = square root
@@ -41,7 +41,7 @@ Square Root
 
 General guidelines
 
-```p
+```python
 # cannot start with number
 # cannot have spaces
 # cannot use special symbols
@@ -52,7 +52,7 @@ General guidelines
 
 Variable Assignment
 
-```p
+```python
 # create object called 'a' and assign it number 5
 a = 5
 
@@ -62,7 +62,7 @@ a = 5
 
 Variable Reassignment
 
-```p
+```python
 a = 10
 
 a = a + a
@@ -76,7 +76,7 @@ a += 10
 
 Dynamic Typing
 
-```p
+```python
 # python uses dynamic typing, which means you can reassign variables to different data types
 # initially assigned an int
 # reassigned as string
@@ -84,7 +84,7 @@ Dynamic Typing
 
 Datatypes
 
-```p
+```python
 # int (for integer)
 # float
 # str (for string)
@@ -97,7 +97,7 @@ Datatypes
 
 ## Strings
 
-```p
+```python
 # strings are a sequence of characters using single or double qoutes
 # 'hello' "hello"
 # since its a sequence, can use indexing
@@ -105,7 +105,7 @@ Datatypes
 
 Types of Strings
 
-```p
+```python
 'hello' # single word
 'this is also a string' # entire phrase
 "string with double quotes" # double quotes
@@ -113,7 +113,7 @@ Types of Strings
 
 Print()
 
-```p
+```python
 print("hello")
 # hello
 # print will export the results, removing the parathesis
@@ -130,7 +130,7 @@ print("hello \t world")
 
 len()
 
-```p
+```python
 len('hello world')
 # 11
 # use len to check length of a string
@@ -138,14 +138,14 @@ len('hello world')
 
 Indexing
 
-```p
+```python
 # strings are ordered sequences, which means we can use indexing or slicing to grab sub-sections
 # indexing starts at 0
 # indexing uses [ ] and allows you to grab single characters
 # can also do reverse indexing -1
 ```
 
-```p
+```python
 mystring = "Hello World"
 mystring[0]
 # H
@@ -161,7 +161,7 @@ mystring[-2]
 
 Slicing
 
-```p
+```python
 # slicing
 # slicing allows you to grab multiple characters
 # syntax [ start:stop:step]
@@ -169,7 +169,7 @@ Slicing
 # step = size of the jump you take
 ```
 
-```p
+```python
 mystring[0:3:1]
 # 'Hel'
 # starts at 0, goes up to, but NOT include index 4 (l), 1 step
@@ -186,7 +186,7 @@ mystring[::2]
 # take all elements in step sizes of 2 
 ```
 
-```p
+```python
 # how do you reverse a string?
 mystring[::-1]
 # 'dlroW olleH'
@@ -195,7 +195,7 @@ mystring[::-1]
 
 immutability
 
-```p
+```python
 # strings are immutable. you cannot grab an element in string
 # and re-assign it to something else
 
@@ -206,7 +206,7 @@ name[0] = 'P'
 
 String Concatention
 
-```p
+```python
 name = "Sam"
 last_letters = name[1:]
 last_letters
@@ -217,13 +217,13 @@ last_letters
 # can use + to concatenate strings
 ```
 
-```p
+```python
 x = 'Hello World'
 x + ' it is a good day'
 # 'Hello World it is a good day'
 ```
 
-```p
+```python
 letter = 'z'
 letter * 10
 # 'zzzzzzzzzz'
@@ -231,7 +231,7 @@ letter * 10
 
 Concatenating Numbers with strings
 
-```p
+```python
 # you will get an error if concatenate numbers with string
 2 + 3
 # 5
@@ -244,7 +244,7 @@ Concatenating Numbers with strings
 
 String - Capitalization 
 
-```p
+```python
 x = 'Hello World'
 x.upper()
 # 'HELLO WORLD'
@@ -255,7 +255,7 @@ x.upper()
 
 String - Lowercase
 
-```p
+```python
 x = 'Hello World'
 x.lower()
 # 'hello world'
@@ -263,20 +263,20 @@ x.lower()
 
 Splitting Strings
 
-```p
+```python
 x.split()
 # ['Hello','World']
 
 # split() will take a string and split it based on the white space
 ```
 
-```p
+```python
 x = 'Hi this is a string'
 x.split()
 # ['Hi','this', 'is', 'a', 'string']
 ```
 
-```p
+```python
 # you can also split on specific letters
 
 x.split('i')
@@ -285,7 +285,7 @@ x.split('i')
 
 Print Function
 
-```p
+```python
 print ("hello world")
 # hello world
 
@@ -294,21 +294,21 @@ print ("hello world")
 
 String Interporlation
 
-```p
+```python
 # injects variables into strings for printing
 # 2 methods: .format() and f string literal
 ```
 
 .format() method
 
-```p
+```python
 print('this is a string {} '.format('INSERTED'))
 # this is a string INSERTED
 
 # .format takes string 'INSERTED' and places it in {}
 ```
 
-```p
+```python
 print ('the {} {} {}'.format('fox','brown','quick'))
 # the fox brown quick
 
@@ -317,24 +317,24 @@ print ('the {} {} {}'.format('fox','brown','quick'))
 
 Indexing for multiple string interprolations
 
-```p
+```python
 print ('the {2} {1} {0}'.format('fox','brown','quick'))
 # the quick brown fox
 ```
 
-```p
+```python
 print ('the {0} {0} {0}'.format('fox','brown','quick'))
 # the fox fox fox
 ```
 
-```p
+```python
 # using varibles for string interpolation
 print ('the {q} {b} {f}'.format(f='fox',b='brown',q='quick'))
 ```
 
 Float formatting with .format()
 
-```p
+```python
 result = 100/777
 result
 # 0.128700
@@ -343,14 +343,14 @@ print ('the result was {}'.format(result))
 # the result was 0.128700
 ```
 
-```p
+```python
 print ('the result was {r}'.format(r = result))
 # the result was 0.128700
 
 # same thing as above
 ```
 
-```p
+```python
 # float formatting follows "{value:width.precision f}"
 
 print ('the result was {r:1.3f}'.format(r=result))
@@ -369,7 +369,7 @@ print ('the result was {r:10.3f}'.format(r=result))
 
 F String Literal (another format for string interpolation)
 
-```p
+```python
 name = "Jose"
 print(f'Hello, his name is {name}')
 # Hello, his name is Jose
@@ -377,7 +377,7 @@ print(f'Hello, his name is {name}')
 # so need f ' + {variable} 
 ```
 
-```p
+```python
 name = "Sam"
 age = 3
 print(f'{name} is {age} years old')
@@ -386,26 +386,26 @@ print(f'{name} is {age} years old')
 
 ## Lists
 
-```p
+```python
 # Lists are ordered sequences that can hold a variety of object types
 # use [ ] brackets and commas to separate objects in list
 # lists support indexing and slicing
 # lists can be nested
 ```
 
-```p
+```python
 # list of int
 
 my_list = [1,2,3]
 ```
 
-```p
+```python
 # list of string, int, float
 
 my_list = ['STRING',100,23.2]
 ```
 
-```p
+```python
 len(my_list)
 # 3
 
@@ -414,7 +414,7 @@ len(my_list)
 
 List - Indexing
 
-```p
+```python
 mylist = ['one','two','three']
 mylist[0]
 # 'one'
@@ -425,7 +425,7 @@ mylist[1:]
 
 Lists - Concatenating 2 Lists
 
-```p
+```python
 another_list = ['four','five']
 new_list = mylist + another_list
 new_list
@@ -434,7 +434,7 @@ new_list
 
 Lists - Indexing to amend elements
 
-```p
+```python
 new_list[0] = 'ONE ALL CAPS'
 new_list
 # ['ONE ALL CAPS', 'two','three','four','five']
@@ -442,7 +442,7 @@ new_list
 
 Lists - Append Elements
 
-```p
+```python
 new_list.append('six')
 new_list
 # ['ONE ALL CAPS', 'two','three','four','five','six']
@@ -453,7 +453,7 @@ new_list
 
 Lists - Remove Elements
 
-```p
+```python
 new_list.pop()
 # 'six'
 new_list
@@ -463,7 +463,7 @@ new_list
 # remove element from end of list
 ```
 
-```p
+```python
 # to save the popped item, save it as a varaible
 
 popped_item = new_list.pop()
@@ -473,7 +473,7 @@ popped_item
 # by default, will pop off -1 index position
 ```
 
-```p
+```python
 # can also use index position to remove elements
 
 new_list.pop(0)
@@ -485,7 +485,7 @@ new_list
 
 Lists - Sorting
 
-```p
+```python
 new_list = ['a','e','x','b','c']
 num_list = [4,1,8,3]
 
@@ -497,7 +497,7 @@ new_list
 
 You cannot assign sorted list as a variable
 
-```p
+```python
 new_sorted_list = new_list.sort()
 
 # this doesnt work because .sort doesnt return anything
@@ -506,7 +506,7 @@ new_sorted_list = new_list.sort()
 
 To assign a sorted list, need to do this:
 
-```p
+```python
 new_list.sort()
 my_sorted_list = new_list
 my_sorted_list
@@ -517,7 +517,7 @@ my_sorted_list
 # now when you call the new variable, the list will be sorted
 ```
 
-```p
+```python
 num_list = [4,1,8,3]
 
 num_list.sort()
@@ -528,7 +528,7 @@ sorted_num_list
 
 Lists - Reverse
 
-```p
+```python
 num_list.reverse()
 num_list
 # [8,4,3,1]
@@ -536,7 +536,7 @@ num_list
 
 ## Dictionaries
 
-```p
+```python
 # dictionaries are unordered mappings for storing objects
 # use a key-value pairing instead
 # allows users to quickly grab objects without index location
@@ -544,13 +544,13 @@ num_list
 # unordered and cannot be sorted
 ```
 
-```p
+```python
 # lists
 # objects retrieved by location
 # ordered sequence; can be indexed or sliced
 ```
 
-```p
+```python
 my_dict = {'key1':'value1','key2':'value2'}
 my_dict['key1']
 # 'value1'
@@ -558,7 +558,7 @@ my_dict['key1']
 # calling a key retrieves its value
 ``` 
 
-```p
+```python
 prices_lookup = {'apple':2.99,'oranges':1.99,'milk':5.80}
 prices_lookup['apple']
 # 2.99
@@ -569,7 +569,7 @@ prices_lookup['apple']
 
 Dictionary - Retrieving Items in nested dictionary
 
-```p
+```python
 d = {'k1':123,'k2':[0,1,2],'k3':{'insidekey':100}}
 
 # dict can contain int, a list, and another dict
@@ -586,7 +586,7 @@ d['k3']['insidekey']
 
 Dictionary - Appending Items
 
-```p
+```python
 d = {'k1': 100,'k2':200}
 d['k3'] = 300
 d
@@ -597,7 +597,7 @@ d
 
 Upserting items to dict
 
-```p
+```python
 d = {'k1': 100,'k2':200}
 d['k1'] = 'NEW ITEM'
 d
@@ -606,21 +606,21 @@ d
 
 Dictionary - Extract all keys
 
-```p
+```python
 d.keys()
 # dict_keys(['k1', 'k2', 'k3'])
 ```
 
 Dictionary - Extract all values
 
-```p
+```python
 d.values()
 # dict_values(['NEW ITEM', 200, 300])
 ```
 
 ## Tuples
 
-```p
+```python
 # very simliar to lists, except they are immutable
 # immutable = cannot be changed
 # once element is inside tuple, cannot be reassigned
