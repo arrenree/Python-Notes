@@ -111,20 +111,27 @@ Types of Strings
 "string with double quotes" # double quotes
 ```
 
-Print()
+Printing a String
 
 ```python
 print("hello")
 # hello
-# print will export the results, removing the parathesis
 
+# print will export the results, removing the parathesis
+```
+
+```python
 print("hello \n world")
 # hello
 #  world
-# the \n is a break sequence that starts new line
 
+# the \n is a break sequence that starts new line
+```
+
+```python
 print("hello \t world")
 # hello   world
+
 # \t is another break sequence that is the same as tab
 ```
 
@@ -136,7 +143,7 @@ len('hello world')
 # use len to check length of a string
 ```
 
-Indexing
+String Indexing
 
 ```python
 # strings are ordered sequences, which means we can use indexing or slicing to grab sub-sections
@@ -149,17 +156,23 @@ Indexing
 mystring = "Hello World"
 mystring[0]
 # H
+```
 
+```python
 len(mystring)
 # 11
-# calc how many elements in string
 
+# calc how many elements in string
+```
+
+```python
 mystring[-2]
 # 'l'
+
 # negative indexing
 ```
 
-Slicing
+String Slicing
 
 ```python
 # slicing
@@ -172,35 +185,50 @@ Slicing
 ```python
 mystring[0:3:1]
 # 'Hel'
-# starts at 0, goes up to, but NOT include index 4 (l), 1 step
 
+# starts at 0, goes up to, but NOT include index 4 (l), 1 step
+```
+
+```python
 mystring[ :3]
 # 'Hel'
+```
 
+```python
 mystring[::]
 # 'Hello World'
-# take everything from string
 
+# take everything from string
+```
+
+```python
 mystring[::2]
 # 'HloWrd'
+
 # take all elements in step sizes of 2 
 ```
 
+Reversing a String
+
 ```python
 # how do you reverse a string?
+
 mystring[::-1]
 # 'dlroW olleH'
+
 # using -1 step reverses the string
 ```
 
-immutability
+String Immutability
 
 ```python
-# strings are immutable. you cannot grab an element in string
-# and re-assign it to something else
+# strings are immutable. 
+# once a string is created, the elements within it cannot be changed or replaced
+# nor can it be re-assigned to something else
 
 name = "Sam"
 name[0] = 'P'
+
 # error. you can't reassign the S to a P in a string
 ```
 
@@ -214,7 +242,10 @@ last_letters
 
 'P' + last_letters
 # 'Pam'
+
 # can use + to concatenate strings
+# extracted 'am' from the original 'Sam'
+# concatenated with 'P' to produce 'Pam'
 ```
 
 ```python
@@ -242,9 +273,21 @@ Concatenating Numbers with strings
 # and not 5
 ```
 
-String - Capitalization 
+String Methods
 
 ```python
+# objects in python have built in methods
+# methods are functions inside the object that can perform actions on object itself
+# methods are in the form:
+
+object.method(parameters)
+
+# parameters are the extra arguments we can pass into the method
+```
+
+```python
+# uppercase function
+
 x = 'Hello World'
 x.upper()
 # 'HELLO WORLD'
@@ -253,17 +296,17 @@ x.upper()
 # doesnt affect the original string
 ```
 
-String - Lowercase
-
 ```python
+# lowercase function
+
 x = 'Hello World'
 x.lower()
 # 'hello world'
 ```
 
-Splitting Strings
-
 ```python
+# split string function
+
 x.split()
 # ['Hello','World']
 
@@ -292,12 +335,43 @@ print ("hello world")
 # prints everything within the parathesis
 ```
 
-String Interporlation
+String Formatting (String Interporlation)
 
 ```python
-# injects variables into strings for printing
-# 2 methods: .format() and f string literal
+# allows you to inject items into a string rather than trying to chain items
+# together using commas or concatenation
+# 3 methods:
+# 1) placeholders using % (oldest)
+# 2) .format() method (improved technique)
+# 3) f-string literals (newer)
 ```
+
+Formatting with % Placeholder
+
+```python
+
+print("I'm going to inject %s here." %'something')
+# I'm going to inject something here
+
+# uses %s as a placeholder
+# referred to as string formatting operator
+```
+
+```python
+# can pass multiple items by placing them inside tuple
+
+print("I'm going to inject %s text here, and %s text here." %('some','more'))
+# I'm going to inject some text here, and more text here.
+```
+
+```python
+# can also pass variable names
+
+x, y = 'some', 'more'
+print("I'm going to inject %s text here, and %s text here."%(x,y))
+# I'm going to inject some text here, and more text here
+```
+
 
 .format() method
 
