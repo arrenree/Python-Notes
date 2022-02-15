@@ -372,6 +372,109 @@ print("I'm going to inject %s text here, and %s text here."%(x,y))
 # I'm going to inject some text here, and more text here
 ```
 
+%s Method
+
+```python
+# %s Method
+
+print('He said his name was %s.' %'Fred')
+# He said his name was Fred.
+
+# %s doesn't include the ' ' 
+# converts whatever it sees into a string (including int and float)
+
+print('I wrote %s programs today.' %3.75)
+# i wrote 3.75 programs today.
+
+# converted float 3.75 into a string
+```
+
+%d Method
+
+```python
+# %d operator converts numbers to ints first, without rounding
+
+print('I wrote %d programs today.' %3.75)  
+# I wrote 3 programs today.
+
+# converts float 3.75 to int (no rounding)
+```
+
+%r Method
+
+```python
+# %r Method
+
+print('He said his name was %r.' %'Fred')
+# He said his name was 'Fred'.
+
+# %r includes the 'quotes'
+```
+
+Padding and Precision of Floating Point Numbers
+
+```python
+# floats use format %5.2f
+# 5 = min number of chars in string
+# .2f = how many number to show past decimal point
+```
+
+```python
+# %5.2f Example
+
+print('Floating point numbers: %5.2f' %(13.144))
+# Floating point numbers: 13.14
+
+# converts 13.144 to a string
+# the .2f = 2 numbers past decimal
+```
+
+```python
+# %1.0f Example
+
+print('Floating point numbers: %1.0f' %(13.144))
+# Floating point numbers: 13
+
+# .0f = 0 places past decimal
+```
+
+```python
+# 1.5f Example
+
+print('Floating point numbers: %1.5f' %(13.144))
+# Floating point numbers: 13.14400
+```
+
+```python
+# 10.2f Example
+
+print('Floating point numbers: %10.2f' %(13.144))
+# Floating point numbers:      13.14
+
+# notice all the whitespace before the float
+```
+
+```python
+# 25.2f Example
+
+print('Floating point numbers: %25.2f' %(13.144))
+# Floating point numbers:                     13.14
+
+# notice all the whitespace before the float
+```
+
+Multiple % Placeholder Formatting
+
+```python
+# can have multiple different conversion tools
+
+print('First: %s, Second: %5.2f, Third: %r' %('hi!',3.1415,'bye!'))
+# First: hi!, Second:  3.14, Third: 'bye!'
+
+# %s & 'hi!' = First: hi!
+# %5.2f & 3.1415 = Second:  3.14
+# %r & 'bye!' = Third: 'bye!'
+```
 
 .format() method
 
@@ -379,38 +482,40 @@ print("I'm going to inject %s text here, and %s text here."%(x,y))
 print('this is a string {} '.format('INSERTED'))
 # this is a string INSERTED
 
-# .format takes string 'INSERTED' and places it in {}
+# .format() takes string 'INSERTED' and places it in {}
 ```
 
 ```python
+# .format takes strings and replaces {} in sequential order
+
 print ('the {} {} {}'.format('fox','brown','quick'))
 # the fox brown quick
-
-# .format takes strings and replaces {} in sequential order
 ```
 
 Indexing for multiple string interprolations
 
 ```python
+# inserted objects can be called by index position
+
 print ('the {2} {1} {0}'.format('fox','brown','quick'))
 # the quick brown fox
 ```
 
 ```python
+# can call same object multiple times
+
 print ('the {0} {0} {0}'.format('fox','brown','quick'))
 # the fox fox fox
 ```
 
 ```python
-# using varibles for string interpolation
+# inserted objects can be assigned keywords
+
 print ('the {q} {b} {f}'.format(f='fox',b='brown',q='quick'))
 ```
 
-Float formatting with .format()
-
 ```python
 result = 100/777
-result
 # 0.128700
 
 print ('the result was {}'.format(result))
@@ -422,7 +527,10 @@ print ('the result was {r}'.format(r = result))
 # the result was 0.128700
 
 # same thing as above
+# assigned keywords to inserted objects
 ```
+
+Float formatting with .format()
 
 ```python
 # float formatting follows "{value:width.precision f}"
@@ -441,6 +549,27 @@ print ('the result was {r:10.3f}'.format(r=result))
 # so by changing the width to 10, you add whitespace
 ```
 
+```python
+print('{0:8} | {1:9}'.format('Fruit', 'Quantity'))
+print('{0:8} | {1:9}'.format('Apples', 3.))
+print('{0:8} | {1:9}'.format('Oranges', 10))
+
+Fruit    | Quantity 
+Apples   |       3.0
+Oranges  |        10
+
+```
+
+```python
+print('{0:<8} | {1:^8} | {2:>8}'.format('Left','Center','Right'))
+print('{0:<8} | {1:^8} | {2:>8}'.format(11,22,33))
+
+Left     |  Center  |    Right
+11       |    22    |       33
+
+# can use < ^ > to set alignment
+```
+
 F String Literal (another format for string interpolation)
 
 ```python
@@ -448,7 +577,15 @@ name = "Jose"
 print(f'Hello, his name is {name}')
 # Hello, his name is Jose
 
-# so need f ' + {variable} 
+# allows you to bring outside variables immediately into string 
+```
+
+```python
+name = "Jose"
+print(f'Hello, his name is {name!r}')
+# Hello, his name is 'Jose'
+
+# allows you to bring outside variables immediately into string 
 ```
 
 ```python
