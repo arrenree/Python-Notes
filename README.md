@@ -601,6 +601,8 @@ print(f'{name} is {age} years old')
 # Lists are ordered sequences that can hold a variety of object types
 # use [ ] brackets and commas to separate objects in list
 # lists support indexing and slicing
+# lists have no fixed size (don't have to specify how big a list will be)
+# lists have no fixed type (can have multiple data types)
 # lists can be nested
 ```
 
@@ -617,30 +619,63 @@ my_list = ['STRING',100,23.2]
 ```
 
 ```python
+# how many items in list? use len()
+
 len(my_list)
 # 3
 
 # 3 items in list
 ```
 
-List - Indexing
+List - Indexing & Slicing
 
 ```python
 mylist = ['one','two','three']
 mylist[0]
 # 'one'
+```
 
+```python
+mylist = ['one','two','three']
 mylist[1:]
 # 'two','three'
+
+# grab index 1 and everything past it
+```
+
+```python
+mylist = ['one','two','three']
+mylist[:2]
+# 'one','two'
+
+# grab everything UP, but not including index 2
 ```
 
 Lists - Concatenating 2 Lists
 
 ```python
+mylist = ['one','two,'three']
 another_list = ['four','five']
+
 new_list = mylist + another_list
 new_list
 # ['one','two','three','four','five']
+
+# this doesn't actually change the original list
+# have to reassign the list to make it permanent
+
+mylist = mylist + another_list
+mylist
+# ['one','two','three','four','five']
+
+```
+
+Lists - Duplicating Strings
+
+```python
+list = ['alpha','bravo']
+list * 2
+# ['alpha', 'bravo', 'alpha', 'bravo']
 ```
 
 Lists - Indexing to amend elements
@@ -654,6 +689,7 @@ new_list
 Lists - Append Elements
 
 ```python
+new_list = ['ONE ALL CAPS', 'two','three','four','five']
 new_list.append('six')
 new_list
 # ['ONE ALL CAPS', 'two','three','four','five','six']
@@ -665,13 +701,14 @@ new_list
 Lists - Remove Elements
 
 ```python
+new_list = ['ONE ALL CAPS', 'two','three','four','five','six']
 new_list.pop()
 # 'six'
+
 new_list
 # ['ONE ALL CAPS', 'two','three','four','five']
 
-# popped off 'six', removed from list
-# remove element from end of list
+# popped off 'six', removed from end of list
 ```
 
 ```python
@@ -745,20 +782,63 @@ num_list
 # [8,4,3,1]
 ```
 
+Lists - Nested Lists / Matrix
+
+```python
+list_1=[1,2,3]
+list_2=[4,5,6]
+list_3=[7,8,9]
+
+# Make a list of lists to form a matrix
+matrix = [list_1,list_2,list_3]
+# [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+```
+
+```python
+# indexing nested lists
+
+matrix[0]
+# [1,2,3]
+
+# grabs first element/row of matrix
+```
+
+```python
+matrix[0][0]
+# 1
+
+# grab the first element of the first row
+```
+
+List - Comprehensions
+
+```python
+# advanced feature which allow for quick construction of lists
+# build a list comprehension by deconstructing a for loop within a [ ]
+
+first_col = [row[0] for row in matrix]
+first_col
+# [1,4,7]
+
+# used list comprehension to grab first element of every row in matrix
+```
+
 ## Dictionaries
 
 ```python
-# dictionaries are unordered mappings for storing objects
+# dictionaries are unordered mappings for storing objects to keys
 # use a key-value pairing instead
 # allows users to quickly grab objects without index location
+# also known as hash tables
 # objects retrieved by key name
 # unordered and cannot be sorted
 ```
 
 ```python
-# lists
-# objects retrieved by location
-# ordered sequence; can be indexed or sliced
+# difference between lists and dictionaries?
+
+# lists are objects retrieved by index location
+# lists are ordered sequence; can be indexed or sliced
 ```
 
 ```python
@@ -793,6 +873,41 @@ d['k2'][2]
 
 d['k3']['insidekey']
 # 100
+```
+
+Dictionary - Affecting Values
+
+```python
+my_dict = {'key1':100,'key2': 200,'key3':300}
+my_dict['key1'] - 50
+# 50
+
+# retrieved the value for key1 and subtracted 50
+```
+
+```python
+my_dict['key1'] -= 100
+my_dict['key1']
+# 0
+
+# -= is the same as key1 = key1 - 100
+```
+
+Dictionary - Creating Keys by Assignment
+
+```python
+# lets say you have an empty dictionary
+d = {}
+
+# create a new key through assignement
+d['animal'] = 'Dog'
+
+# you've now appended animal (key) with dog (value)
+
+# can do this with any object
+d['num'] = 42
+d
+# {'animal': 'Dog', 'answer': 42}
 ```
 
 Dictionary - Appending Items
