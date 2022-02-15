@@ -1,4 +1,4 @@
-# Python-Notes
+# Python Notes by Allen
 
 ## Arithmetic
 
@@ -950,5 +950,89 @@ d.values()
 # very simliar to lists, except they are immutable
 # immutable = cannot be changed
 # once element is inside tuple, cannot be reassigned
+# useful for things like days of the week, or dates on a calendar
 # tuples use parathesis (1,2,3)
 ```
+
+```python
+t = (1,2,3)
+
+# this is a tuple
+```
+
+```python
+# can use indexing
+
+t[0]
+# 1
+
+# can also use slicing
+t[-1]
+# 3
+```
+
+Basic Tuple Methods
+
+```python
+# .index to enter a value and return the index position
+
+t.index(2)
+# 1
+
+# value 2 is located in index position 1
+```
+
+```python
+# .count to count number of times a value appears
+
+t = (1, 1, 1, 2, 2, 2, 3, 3, 3)
+t.count(1)
+# 3
+
+# 1 appears 3x in the tupple
+```
+## Sets
+
+```python
+# sets are unordered collection of unique elements
+# use set() function
+```
+
+```python
+# create empty set
+
+x = set()
+```
+
+```python
+# add 1 to the set
+
+x.add(1)
+x
+# {1}
+
+# used the .add() method to add 1 to the set
+```
+
+```python
+# now try to add 1 again to the set
+
+x.add(1)
+x
+# {1}
+
+# doesn't duplicate since only saves unique elements
+```
+
+```python
+# cast a list of duplicates as a set to retain only unique elements
+
+list1 = [1,1,2,2,3,4,5,5]
+set(list1)
+# {1, 2, 3, 4, 5}
+
+# set now only contains unique elements
+```
+
+
+
