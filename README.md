@@ -1034,5 +1034,123 @@ set(list1)
 # set now only contains unique elements
 ```
 
+## Files
+
+```python
+# python uses file objects to interact with external files on your computer
+# python has built in open function that allows us to open file types
+# 1) need to first OPEN file
+# 2) then can READ file
+```
+
+Files - Opening + Reading
+
+```python
+# create simple test.txt file
+
+# open txt files
+
+myfile = open('test.txt')
+
+# now the test.txt file is "opened"
+```
+
+```python
+# read the txt file
+
+myfile.read()
+# 'Hello, this is a quick test file.'
+```
+
+```python
+# what happens if you try to read it again?
+
+myfile.read()
+''
+
+# this is because the reading "cursor" is at end of file after having read it
+# need to reset the cursor
+
+myfile.seek(0)
+# 0
+
+# seek to the start of file (index 0)
+```
+
+```python
+# now, you can read it again
+
+myfile.read()
+# 'Hello, this is a quick test file.'
+```
+
+Readlines Method
+
+```python
+# readlines returns a list of the lines in the file
+
+myfile.seek(0) # resets cursor to beginning
+myfile.readlines()
+# ['Hello, this is a quick test file.']
+```
+
+```python
+# close file after you're finished with it
+myfile.close()
+```
+
+Writing to a File
+
+```python
+# by default, the open() function only allows us to read the file
+# need to pass argument 'w' to write over file
+
+myfile = open('test.txt','w+')
+
+# adding a second argument to function, 'w' stands for write
+# 'w+' = read and write to the file
+```
+
+```python
+# careful! opening a file with 'w' or 'w+' truncates original, meaning
+# anything in the original file is deleted!
+
+myfile = open('test.txt','w+') # opens + writes file
+myfile.write('this is a new line') # overwrites file
+myfile.seek(0) # resets cursor
+myfile.read() # reads file
+# 'this is a new line'
+
+myfile.close() # good habit to close files when finished
+```
+Appending to a File
+
+```python
+# passing argument 'a' opens the file and puts the pointer at the end
+# so anything written is appended
+# a+ lets us read and write to a file
+# if the file does not exist, one will be created
+```
+
+```python
+myfile = open('test.txt','a+')
+myfile.write('\n this text is being appended')
+myfile.write('\nAnd another line here')
+
+myfile.seek(0) # since a+ moves cursor to end, need to reset cursor
+myfile.read()
+# 'this is a new line\n this text is being appended\nAnd another line here
+
+# printing the .txt file is cleaner
+
+print(myfile.read())
+
+# this is a new line
+#  this text is being appended
+# And another line here
+
+myfile.close()
+```
+
 
 
