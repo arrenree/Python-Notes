@@ -1503,6 +1503,231 @@ sorted(d.values())
 ## while Loops
 
 ```python
+# while statement will repeatedly execute as long as condition is true
+# loop because code will continue looping until condition is no longer met
+```
 
+```python
+x = 0
 
+while x < 5:
+    print('x is currently: ',x)
+    print(' x is still less than 5, adding 1 to x')
+    x+=1
+
+# x is currently:  0
+#  x is still less than 5, adding 1 to x
+# x is currently:  1
+#  x is still less than 5, adding 1 to x
+# x is currently:  2
+#  x is still less than 5, adding 1 to x
+# x is currently:  3
+#  x is still less than 5, adding 1 to x
+# x is currently:  4
+#  x is still less than 5, adding 1 to x
+
+# so the while loop keeps running until x isnt < 5
+```
+
+same thing, but adding an else statement
+
+```python
+x = 0
+
+while x < 5:
+    print('x is currently: ',x)
+    print(' x is still less than 5, adding 1 to x')
+    x+=1
+else:
+    print('All done!')
+
+# x is currently:  0
+#  x is still less than 5, adding 1 to x
+# x is currently:  1
+#  x is still less than 5, adding 1 to x
+# x is currently:  2
+#  x is still less than 5, adding 1 to x
+# x is currently:  3
+#  x is still less than 5, adding 1 to x
+# x is currently:  4
+#  x is still less than 5, adding 1 to x
+# All done!
+
+# while loop keeps running until x isnt < 5
+# then it executes the else statement
+```
+
+break, continue, pass
+
+```python
+# break - breaks out of the current loop
+# continue - goes to the top of current loop
+# pass - does nothing at all
+```
+
+```python
+x = 0
+
+while x < 5:
+    print('x is currently: ',x)
+    print(' x is still less than 5, adding 1 to x')
+    x+=1
+    if x==3:
+        print('x==3')
+    else:
+        print('continuing...')
+        continue
+        
+x is currently:  0
+ x is still less than 5, adding 1 to x
+continuing...
+x is currently:  1
+ x is still less than 5, adding 1 to x
+continuing...
+x is currently:  2
+ x is still less than 5, adding 1 to x
+x==3
+x is currently:  3
+ x is still less than 5, adding 1 to x
+continuing...
+x is currently:  4
+ x is still less than 5, adding 1 to x
+continuing...
+
+# so once x+=1 becomes 3
+# prints x==3
+# continues the outer while loop
+# and since 3 < 5, prints x is less than 5, etc.
+```
+while loop + if + else + break
+
+```python
+x = 0
+
+while x < 5:
+    print('x is currently: ',x)
+    print(' x is still less than 5, adding 1 to x')
+    x+=1
+    if x==3:
+        print('Breaking because x==3')
+        break
+    else:
+        print('continuing...')
+        continue
+        
+x is currently:  0
+ x is still less than 10, adding 1 to x
+continuing...
+x is currently:  1
+ x is still less than 10, adding 1 to x
+continuing...
+x is currently:  2
+ x is still less than 10, adding 1 to x
+Breaking because x==3
+
+# once x+=1 is 3, prints 'breaking bc x==3
+# then breaks out of this loop (stops executing)
+```
+
+## Useful Operators
+
+range
+
+```python
+# range() allows you to quickly generate a list of integers
+# start, stop, and step parameter
+```
+
+```python
+range(0,11)
+# range(0,11)
+
+# range() is a generator function
+# to get a list out of it, we need to cast it to a list()
+# generator functions generate info but does not save to memory
+
+list(range(0,11))
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# so generates from 0 up to, but not including 11
+# and is cast as a list()
+```
+
+```python
+# third parameter is step size
+
+list(range(0,11,2))
+# [0, 2, 4, 6, 8, 10]
+```
+
+enumerate
+
+```python
+index_count = 0
+
+for letter in 'abcde':
+    print("At index {} the letter is {}".format(index_count,letter))
+    index_count +=1
+
+At index 0 the letter is a
+At index 1 the letter is b
+At index 2 the letter is c
+At index 3 the letter is d
+At index 4 the letter is e
+
+# for every element in string 'abcde', use indexing to insert objects into {} 
+# then index_count becomes +1, and iterates through again
+```
+
+```python
+# enumerate()
+# keeping track of how many loops you've gone through is so common 
+# that enumerate was created so you don't have to keep creating
+# the index_count variable
+
+enumerate('abcde')
+# <enumerate object at 0x0000027FC8B4BD00>
+# to see what you actually enumerated, cast as list
+
+list(enumerate('abcde'))
+[(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e')]
+
+# enumerate creates list of tuples from your string!
+# so you can use tuple unpacking method!
+```
+
+```python
+for num,letter in enumerate('abcde'):
+    print("At index {} the letter is {}".format(num,letter))
+
+At index 0 the letter is a
+At index 1 the letter is b
+At index 2 the letter is c
+At index 3 the letter is d
+At index 4 the letter is e
+
+# enumerate turns string 'abcde' into a list of tuples (index position, letter)
+# then use for loop for tuple unpacking! (num,letter) 
+```
+zip
+
+```python
+# zip() function allows you to create a list of tuples by "zipping" together 2 lists
+
+mylist1 = [1,2,3,4,5]
+mylist2 = ['a','b','c','d','e']
+
+zip(mylist1,mylist2)
+# <zip at 0x1d205086f08>
+
+# generates your zipped list, to view, need to cast as list
+
+list(zip(mylist1,mylist2))
+
+# [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')]
+```
+
+```python
+for item1, item2 in zip(mylist1,mylist2):
+    print('For this tuple, first item was {} and second item was {}'.format(item1,item2))
 
