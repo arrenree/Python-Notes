@@ -1152,5 +1152,357 @@ print(myfile.read())
 myfile.close()
 ```
 
+## Comparison Operators
+
+```python
+# allows us to compare variables and output a boolean (True or False)
+```
+
+Equals
+
+```python
+2 == 2
+# True
+```
+
+Does not equal
+
+```python
+2 != 3
+# True. 2 does not equal 3. Statement is true.
+
+2 != 2
+# False. 2 does not equal 2. Statement is false.
+```
+
+Chained Comparison Operators
+
+```python
+1 < 2 < 3
+# True
+```
+
+```python
+1 < 2 and 2 < 3
+# True
+
+# AND = both statements HAVE to be true for it to be true
+```
+
+```python
+1 == 2 or 2 < 3
+# True
+
+# OR = only one of the statements need to be true
+```
+
+## if, elif, else Statements
+
+```python
+# if = if this happens, perform this action
+
+# elif = if this happens, perform A. Else, if something else happens, perform B. Else, if none of the above cases happen, perform C.
+
+if case1:
+    perform action1
+elif case2:
+    perform action2
+else:
+    perform action3
+```
+
+Examples
+
+```python
+x = False
+
+if x:
+    print('x was True!')
+else:
+    print('I will be printed in any case where x is not true')
+# I will be printed in any case where x is not true
+
+# since x is not true, first action is skipped, goes to 2nd action
+```
+
+```python
+loc = 'Bank'
+
+if loc == 'Auto Shop':
+    print('Welcome to the Auto Shop!')
+elif loc == 'Bank':
+    print('Welcome to the bank!')
+else:
+    print('Where are you?')
+
+# Welcome to the bank!
+```
+
+```python
+person = 'Sammy'
+
+if person == 'Sammy':
+    print('Welcome Sammy!')
+else:
+    print("Welcome, what's your name?")
+  
+# Welcome Sammy!
+```
+
+```python
+person = 'George'
+
+if person == 'Sammy':
+    print('Welcome Sammy!')
+elif person =='George':
+    print('Welcome George!')
+else:
+    print("Welcome, what's your name?")
+  
+# Welcome George!
+```
+
+## for Loops
+
+```python
+# for loops act as an iterator in python
+# it goes through items that are in a sequence or any other iterable item
+
+for item in object:
+    statements to do stuff
+
+# variable name used for the item is up to coder
+```
+
+for loop
+
+```python
+list1 = [1,2,3,4]
+
+for num in list1:
+    print(num)
+
+# 1
+# 2
+# 3
+# 4
+```
+
+for loop + if 
+
+```python
+# print only even numbers
+
+list1 = [1,2,3,4]
+
+for num in list1:
+    if num % 2 == 0:  # mod = 0 means even number
+        print(num)
+
+# 2
+# 4
+```
+
+for loop  + if + else
+
+```python
+list1 = [1,2,3,4]
+
+for num in list1:
+    if num % 2 == 0:  # mod = 0 means even number
+        print(num)
+    else:
+        print('Odd number')
+
+# Odd number
+# 2
+# Odd number
+# 4
+```
+
+for loop running tally
+
+```python
+list1 = [1,2,3,4,5,6,7,8,9,10]
+
+# running tally starts at zero
+list_sum = 0
+
+for num in list1:
+    list_sum = list_sum + num
+
+print(list_sum)
+
+# 55
+
+# iterate through every element in list1
+# add element to list_sum (starting as 0)
+```
+
+```python
+# another form of syntax (using +=)
+
+list1 = [1,2,3,4,5,6,7,8,9,10]
+
+list_sum = 0
+
+for num in list1:
+    list_sum += num
+
+print(list_sum)
+
+# 55
+```
+
+for loop with strings
+
+```python
+
+for letter in 'hello':
+    print(letter)
+
+# h
+# e
+# l
+# l
+# o
+    
+# for every element (variable = letter) in string 'hello'
+# print out each element
+```
+
+for loop with tuple
+
+```python
+tup = (1,2,3,4,5)
+
+for t in tup:
+    print(t)
+
+# 1    
+# 2
+# 3   
+# 4
+# 5
+
+# for every element in tuple (defined above)
+# print the element
+```
+
+Tuple unpacking
+
+```
+# tuples have a special quality when it comes to for loops
+# if you are iterating through a tuple, the item can be tuple itself
+# this is called tuple unpacking
+# doing so can access the individual items inside that tuple
+```
+
+```python
+list2 = [(2,4),(6,8),(10,12)]
+
+for tup in list2:
+    print(tup)
+
+# (2,4)
+# (6,8)
+# (10,12)
+
+# for every element in list2 (3 elements)
+# print each element
+```
+
+```python
+# now using tuple unpacking
+
+for (t1,t2) in list2:
+    print(t1)
+
+# 2
+# 6
+# 10
+
+# for each tuple in list, print first element of the tuple
+```
+
+for loop with dictionaries
+
+```python
+
+d = {'k1':1,'k2':2,'k3':3}
+
+for item in d:
+    print(item)
+    
+# k1
+# k2
+# k3
+
+# for each element (key/value) in d (dictionary)
+# notice this only prints the keys
+```
+
+Dictionary methods
+
+```python
+# .items() method
+
+d = {'k1':1,'k2':2,'k3':3}
+
+d.items()
+
+# dict_items([('k1', 1), ('k2', 2), ('k3', 3)])
+
+# .items() returns all items in dictionary
+```
+
+```python
+# iteration through .items() method
+
+d = {'k1':1,'k2':2,'k3':3}
+
+for k, v, in d.items():
+    print(k)
+    print(v)
+    
+# k1
+# 1
+# k2
+# 2
+# k3
+# 3
+```
+
+```python
+# .keys() method
+
+d = {'k1':1,'k2':2,'k3':3}
+
+d.keys()
+# dict_keys(['k1', 'k2', 'k3'])
+
+# .keys() retrieves the keys from dictionary d
+
+list(d.keys())
+# ['k1', 'k2', 'k3']
+
+# cast result of .keys() as a list
+```
+
+```python
+# sorted() method on .values() method
+
+d = {'k1':1,'k2':2,'k3':3}
+
+sorted(d.values())
+# [1, 2, 3]
+
+# using the sorted() method to obtain a sorted list
+```
+
+## while Loops
+
+```python
+
 
 
