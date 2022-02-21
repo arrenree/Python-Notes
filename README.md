@@ -1731,3 +1731,88 @@ list(zip(mylist1,mylist2))
 for item1, item2 in zip(mylist1,mylist2):
     print('For this tuple, first item was {} and second item was {}'.format(item1,item2))
 
+For this tuple, first item was 1 and second item was a
+For this tuple, first item was 2 and second item was b
+For this tuple, first item was 3 and second item was c
+For this tuple, first item was 4 and second item was d
+For this tuple, first item was 5 and second item was e
+```
+
+in operator
+
+```python
+
+'x' in ['x','y','z']
+# True
+
+'x' in [1,2,3]
+# False
+```
+
+not in
+
+```python
+
+'x' not in ['x','y','z']
+# False
+
+'x' not in [1,2,3]
+# True
+```
+
+min and max
+
+```python
+mylist = [10,20,30,40,100]
+min(mylist)
+# 10
+
+max(mylist)
+# 100
+
+```
+
+random - shuffle
+
+```python
+# python comes with built in random library
+
+from random import shuffle
+
+# this shuffles the list "in place" so it wont
+# return anything, inistead it will effect the list passed
+
+shuffle(mylist)
+
+mylist
+# [40, 10, 100, 30, 20]
+```
+
+random - randint
+
+```python
+from random import randint
+
+# return random integer in range [a,b], including both end points
+
+randint(0,100)
+# 25
+```
+
+input
+
+```python
+
+input('Enter something in this box: ')
+# Enter something in this box: []
+# Enter something in this box: [hello]
+# 'hello'
+```
+
+
+
+
+
+
+
+
