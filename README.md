@@ -1808,8 +1808,217 @@ input('Enter something in this box: ')
 # Enter something in this box: [hello]
 # 'hello'
 ```
+### List Comprehensions
 
+```q
+# list comprehensions allow us to build lists using different notation
+# essentially a one line for loop built inside brackets
+```
 
+```python
+# grab every letter in string
+
+list1 = [x for x in 'word']
+list1
+# ['w','o','r','d']
+
+# return x for every x in string 'word'
+```
+
+square numbers in range and turn into list
+
+```python
+list2 = [x**2 for x in range(0,11)]
+list2
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+# return x**2 for every x in range 0-10
+```
+
+if statement example
+
+```python
+# check for even numbers in a range
+
+list3 = [x for x in range(11) if x % 2 == 0]
+list3
+# [0,2,4,6,8,10]
+
+# return x for every x in range 0-10, if x % 2 = 0
+# ie, return every even number
+```
+converting celsius to fahrenheit
+
+```python
+# convert celsius to fahrenheit
+
+celsius = [0,10, 20.1, 34.5]
+fahrenheit = [((9/5) * temp + 32) for temp in celsius]
+
+fahrenheit
+# [32.0, 50.0, 68.18, 94.1]
+
+# first you define a list celsius
+# return variable 'temp' for every 'temp' in list celsius
+```
+
+nested list comprehensions
+
+```python
+list4 = [x**2 for x in [x**2 for x in range(11)]]
+list4
+# [0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561, 10000]
+
+# start with inside bracket
+# return x**2 for every x in range of 0-10
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+# then go to outside bracket
+# return x**2 for every element in [ ]
+# 0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561, 10000
+```
+
+Statements Assessment
+
+Use for, .split(), and if to create a Statement that will print out words that start with 's':
+
+```python
+st = 'Print only the words that start with s in this sentence'
+
+for word in st.split()
+    if word[0] == 's':
+        print(word)
+     
+# start
+# s
+# sentence
+```
+
+use range() to print all the even numbers from 0 to 10.
+
+```python
+list(range(0,11,2))
+# [0,2,4,6,8,10]
+
+# step 2 will automatically go from 0 to 2 and include all even numbers
+```
+
+use list comprehension to create a list of all numbers between 1 and 50 that are divisble by 3
+
+```python
+[x for x in range(1,51) if x%3 == 0]
+# [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48]
+
+# return x for every x in range 1-50
+# x % 3 = 0 means every multiple of 3
+```
+
+if the length of a word is even, print "even!"
+
+```python
+st = 'Print every word in this sentence that has an even number of letters'
+
+for word in st.split():
+    if len(word)%2 == 0:
+        print(word+" <-- has an even length!")
+   
+word <-- has an even length!
+in <-- has an even length!
+this <-- has an even length!
+sentence <-- has an even length!
+that <-- has an even length!
+an <-- has an even length!
+even <-- has an even length!
+number <-- has an even length!
+of <-- has an even length!  
+
+# need to split string.
+# for every element (word) in string st
+# if the length of word is even (length mod 2 = 0)
+# print element (word) + string
+```
+
+print integers from 1 to 100
+for multiples of 3, print "Fizz" instead of the number
+for multiples of 5, print "Buzz"
+for multiples of both 3 and 5, print "Fizzbuzz"
+
+```python
+for num in range(1,101):
+    if num % 3 == 0 and num % 5 == 0:
+        print("Fizzbuzz")
+    elif num % 3 == 0:
+        print("Fizz")
+    elif num % 5 == 0:
+        print("Buzz")
+    else:
+        print(num)  
+```
+
+use list comprehension to create a list of the first letter of every word in the string below
+
+```python
+
+st = 'Create a list of the first letters of every word in this string'
+[word[0] for word in st.split()]
+
+# ['C', 'a', 'l', 'o', 't', 'f', 'l', 'o', 'e', 'w', 'i', 't', 's']
+
+# split the string st
+# return variable index position 0 (word) for every variable (word) in split string
+# whole thing is encased with [ ] because you are returning a list
+```
+
+Guessing Game Challenge
+
+```python
+# picks random integer from 1 to 100
+
+# rules:
+# 1) if guess is <1 or > 100, say "OUT OF BOUNDS"
+# 2) on players first guess, if guess is within 10 of a number, return "WARM!"
+# 2b) if further than 10 away, return "COLD!"
+# 3) on all subsequent turns, if closer to number than prev guess, return "WARMER!"
+# 3b) if farther away from prev guess, return "COLDER!"
+# 4) when guess = number, tell them they've guessed correctly and how many guesses it took
+```
+1. Pick random integer
+
+```python
+# first, load the random module
+# then pick random integer and assign to variable
+# syntax = random.randint(a,b) returns a random int in range [a,b]
+
+import random
+num = random.randint(1,100)
+```
+
+2. Create a list to store guesses
+
+```python
+guesses = [0]
+
+# 0 is a good placeholder because it evaluates to "False"
+```
+
+3. Write while loop that asks for a valid guess
+
+```python
+
+while True
+
+    guess = int(input("I'm thinking of a number between 1 and 100.\n What is your guess? " ))
+    
+    if guess < 1 or guess > 100:
+        print('Out of bounds! Please try again: ')
+        continue
+        
+    break
+    
+# input() allows user to input something
+# inputs are strings, so you need to cast as an int()
+# store this as variable guess
+# if variable (guess) is out of bounds, print 
+```
 
 
 
