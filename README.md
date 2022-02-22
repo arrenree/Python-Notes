@@ -13,9 +13,28 @@
 7. [Dynamic Typing](#dynamic_typing)
 8. [Datatypes](#datatypes)
 
-
-
-## 2. [Strings](#strings)
+### 2. [Strings](#strings)
+1. [Types of Strings](#string_type)
+2. [Printing a String](#string_print)
+3. [Len()](#string_length)
+4. [String Indexing](#string_indexing)
+5. [String Slicing](#string_slicing)
+6. [Reversing a String](#string_reverse)
+7. [String Immutability](#string_immut)
+8. [String_Concatenation](#string_con)
+9. [Concatenating Numbers with Strings](#string_con_num)
+10. [String Methods](#string_methods)
+11. [String Formatting / String Interporlation](#string_format)
+12. [% Placeholder](#string_percent)
+13. [%s Method](#string_percent_s)
+14. [%d Method](#string_percent_d)
+15. [%r Method](#string_percent_r)
+16. [Float Precision](#string_float)
+17. [Multiple % Placeholder](#string_percent_multiple)
+18. [.format() Method](#string_.format)
+19. [.format() Indexing](#string_.format_index)
+20. [.format() Float Formatting](#string_.format_float)
+21. [f String Literal](#string_fstring)
 
 ## 3. [Lists](#lists)
 
@@ -146,8 +165,8 @@ a += 10
 # 'hello' "hello"
 # since its a sequence, can use indexing
 ```
-
-Types of Strings
+<a name="string_type"></a>
+### Types of Strings
 
 ```python
 'hello' # single word
@@ -155,7 +174,8 @@ Types of Strings
 "string with double quotes" # double quotes
 ```
 
-Printing a String
+<a name="string_print"></a>
+### Printing a String
 
 ```python
 print("hello")
@@ -179,7 +199,8 @@ print("hello \t world")
 # \t is another break sequence that is the same as tab
 ```
 
-len()
+<a name="string_length"></a>
+### len()
 
 ```python
 len('hello world')
@@ -187,7 +208,8 @@ len('hello world')
 # use len to check length of a string
 ```
 
-String Indexing
+<a name="string_indexing"></a>
+### String Indexing
 
 ```python
 # strings are ordered sequences, which means we can use indexing or slicing to grab sub-sections
@@ -216,7 +238,8 @@ mystring[-2]
 # negative indexing
 ```
 
-String Slicing
+<a name="string_slicing"></a>
+### String Slicing
 
 ```python
 # slicing
@@ -252,7 +275,8 @@ mystring[::2]
 # take all elements in step sizes of 2 
 ```
 
-Reversing a String
+<a name="string_reverse"></a>
+### Reversing a String
 
 ```python
 # how do you reverse a string?
@@ -263,7 +287,8 @@ mystring[::-1]
 # using -1 step reverses the string
 ```
 
-String Immutability
+<a name="string_immut"></a>
+### String Immutability
 
 ```python
 # strings are immutable. 
@@ -276,7 +301,8 @@ name[0] = 'P'
 # error. you can't reassign the S to a P in a string
 ```
 
-String Concatention
+<a name="string_con"></a>
+### String Concatention
 
 ```python
 name = "Sam"
@@ -304,7 +330,8 @@ letter * 10
 # 'zzzzzzzzzz'
 ```
 
-Concatenating Numbers with strings
+<a name="string_con_num"></a>
+### Concatenating Numbers with strings
 
 ```python
 # you will get an error if concatenate numbers with string
@@ -317,7 +344,8 @@ Concatenating Numbers with strings
 # and not 5
 ```
 
-String Methods
+<a name="string_methods"></a>
+### String Methods
 
 ```python
 # objects in python have built in methods
@@ -379,7 +407,8 @@ print ("hello world")
 # prints everything within the parathesis
 ```
 
-String Formatting (String Interporlation)
+<a name="string_format"></a>
+### String Formatting (String Interporlation)
 
 ```python
 # allows you to inject items into a string rather than trying to chain items
@@ -390,7 +419,8 @@ String Formatting (String Interporlation)
 # 3) f-string literals (newer)
 ```
 
-Formatting with % Placeholder
+<a name="string_percent"></a>
+### % Placeholder
 
 ```python
 
@@ -416,7 +446,8 @@ print("I'm going to inject %s text here, and %s text here."%(x,y))
 # I'm going to inject some text here, and more text here
 ```
 
-%s Method
+<a name="string_percent_e"></a>
+### %s Method
 
 ```python
 # %s Method
@@ -433,7 +464,8 @@ print('I wrote %s programs today.' %3.75)
 # converted float 3.75 into a string
 ```
 
-%d Method
+<a name="string_percent_e"></a>
+### %d Method
 
 ```python
 # %d operator converts numbers to ints first, without rounding
@@ -444,7 +476,8 @@ print('I wrote %d programs today.' %3.75)
 # converts float 3.75 to int (no rounding)
 ```
 
-%r Method
+<a name="string_percent_r"></a>
+### %r Method
 
 ```python
 # %r Method
@@ -454,8 +487,8 @@ print('He said his name was %r.' %'Fred')
 
 # %r includes the 'quotes'
 ```
-
-Padding and Precision of Floating Point Numbers
+<a name="string_float"></a>
+### Float Precision
 
 ```python
 # floats use format %5.2f
@@ -507,7 +540,8 @@ print('Floating point numbers: %25.2f' %(13.144))
 # notice all the whitespace before the float
 ```
 
-Multiple % Placeholder Formatting
+<a name="string_percent_multiple"></a>
+### Multiple % Placeholder Formatting
 
 ```python
 # can have multiple different conversion tools
@@ -519,8 +553,8 @@ print('First: %s, Second: %5.2f, Third: %r' %('hi!',3.1415,'bye!'))
 # %5.2f & 3.1415 = Second:  3.14
 # %r & 'bye!' = Third: 'bye!'
 ```
-
-.format() method
+<a name="string_.format"></a>
+### .format() Method
 
 ```python
 print('this is a string {} '.format('INSERTED'))
@@ -535,8 +569,8 @@ print('this is a string {} '.format('INSERTED'))
 print ('the {} {} {}'.format('fox','brown','quick'))
 # the fox brown quick
 ```
-
-Indexing for multiple string interprolations
+<a name="string_.format_index"></a>
+### .format() Indexing
 
 ```python
 # inserted objects can be called by index position
@@ -573,8 +607,8 @@ print ('the result was {r}'.format(r = result))
 # same thing as above
 # assigned keywords to inserted objects
 ```
-
-Float formatting with .format()
+<a name="string_.format_float"></a>
+### .format() Float Formatting 
 
 ```python
 # float formatting follows "{value:width.precision f}"
@@ -613,8 +647,8 @@ Left     |  Center  |    Right
 
 # can use < ^ > to set alignment
 ```
-
-F String Literal (another format for string interpolation)
+<a name="string_.fstring"></a>
+### f String Literal
 
 ```python
 name = "Jose"
