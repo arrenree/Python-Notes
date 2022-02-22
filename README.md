@@ -36,29 +36,18 @@
 20. [.format() Float Formatting](#string_.format_float)
 21. [f String Literal](#string_fstring)
 
-## 3. [Lists](#lists)
-
-## 4. [Dictionaries](#dictionaries)
-
-## 5. [Tuples](#tuples)
-
-## 6. [Files](#files)
-
-## 7. [Comparison Operators](#comp_operator)
-
-## 8. [if, elif, else Statements](#if)
-
-## 9. [for Loops](#for_loops)
-
-## 10. [while Loops](#while_loops)
-
-## 11. [Useful Operators](#useful_operators)
-
-## 12. [List Comprehensions](#list_comprehension)
-
-## 13. [Guessing Game Challenge](#guessing_game)
-
-## 14. [Methods](#methods)
+### 3. [Lists](#lists)
+### 4. [Dictionaries](#dictionaries)
+### 5. [Tuples](#tuples)
+### 6. [Files](#files)
+### 7. [Comparison Operators](#comp_operator)
+### 8. [if, elif, else Statements](#if)
+### 9. [for Loops](#for_loops)
+### 10. [while Loops](#while_loops)
+### 11. [Useful Operators](#useful_operators)
+### 12. [List Comprehensions](#list_comprehension)
+### 13. [Guessing Game Challenge](#guessing_game)
+### 14. [Methods](#methods)
 
 <hr>
 
@@ -2236,7 +2225,7 @@ say_hello()
 # MUST INDENT - python takes whitespace seriously
 ```
 
-Accepting Parameters (arguments)
+Functions with Arguments
 
 ```python
 def greeting(name):
@@ -2250,5 +2239,99 @@ greeting('Allen')
 # you want to print 'hello + insert argument' 
 # to CALL function, use greeting()
 # and enter your name as the argument
+```
+
+Return
+
+```python
+# return allows a function to return a result that can then be STORED as a variable
+
+def add_num(num1,num2):
+    return num1+num2
+
+# call function
+
+add_num(2,3)
+# 5
+
+# can also save as variable thanks to return
+
+result = add_num(2,3)
+print(result)
+# 5
+
+# what happens if we enter 2 strings?
+
+add_num('one','two')
+# 'onetwo'
+```
+
+What's the diff btwn return and print?
+
+```python
+# return = allows you to SAVE result of function output as a variable
+# print = simply displays output to you (but doesnt save for future use)
+```
+
+Check if number is even
+
+```python
+def even_check(number):
+    return number % 2 == 0
+
+# call function
+
+even_check(10)
+True
+
+even_check(11)
+False
+
+# you essentialy use the mod logic to output TRUE or FALSE
+# since num mod 2 = 0 means nothing leftover = even
+```
+
+Check if any number in list is even
+
+```python
+# lets return boolean if any number is even
+# return breaks out of the loop and exits the function
+```
+
+
+```python
+# WRONG example first
+
+def check_even_list(num_list):
+    # Go through each number
+    for number in num_list:
+        # Once we get a "hit" on an even number, we return True
+        if number % 2 == 0:
+            return True
+        # This is WRONG! This returns False at the very first odd number!
+        # It doesn't end up checking the other numbers in the list!
+        else:
+            return False
+# UH OH! It is returning False after hitting the first 1
+check_even_list([1,2,3])
+
+# doesn't go through full list!
+```
+
+```python
+# CORRECT approach
+# need to initiate a return FALSE after running through entire loop
+
+def check_even_list(num_list):
+    # Go through each number
+    for number in num_list:
+        # Once we get a "hit" on an even number, we return True
+        if number % 2 == 0:
+            return True
+        # Don't do anything if its not even
+        else:
+            pass
+    # Notice the indentation! This ensures we run through the entire for loop    
+    return False
 ```
 
