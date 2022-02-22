@@ -1,6 +1,38 @@
 # Python Notes by Allen
+<a name="top"></a>
 
-## Arithmetic
+# Contents
+
+## 1. [Basic Math & Variable Assignments](#basic_math)
+
+## 2. [Strings](#strings)
+
+## 3. [Lists](#lists)
+
+## 4. [Dictionaries](#dictionaries)
+
+## 5. [Tuples](#tuples)
+
+## 6. [Files](#files)
+
+## 7. [Comparison Operators](#comp_operator)
+
+## 8. [if, elif, else Statements](#if)
+
+## 9. [for Loops](#for_loops)
+
+## 10. [while Loops](#while_loops)
+
+## 11. [Useful Operators](#useful_operators)
+
+## 12. [List Comprehensions](#list_comprehension)
+
+## 13. [Guessing Game Challenge](#guessing_game)
+
+
+<a name="basic_math"></a>
+## 🔴 1. Basic Math & Variable Assignments
+[Top](#top)
 
 Floor Division
 
@@ -37,9 +69,7 @@ Square Root
 # returns a float
 ```
 
-## Variable Assignments
-
-General guidelines
+Variable Assignments
 
 ```python
 # cannot start with number
@@ -95,7 +125,9 @@ Datatypes
 # bool (for Boolean True/False)
 ```
 
-## Strings
+<a name="strings"></a>
+## 🔴 2. Strings
+[Top](#top)
 
 ```python
 # strings are a sequence of characters using single or double qoutes
@@ -595,7 +627,10 @@ print(f'{name} is {age} years old')
 # same is 3 years old
 ```
 
-## Lists
+<a name="lists"></a>
+## 🔴 3. Lists
+[Top](#top)
+
 
 ```python
 # Lists are ordered sequences that can hold a variety of object types
@@ -823,7 +858,9 @@ first_col
 # used list comprehension to grab first element of every row in matrix
 ```
 
-## Dictionaries
+<a name="dictionaries"></a>
+## 🔴 4. Dictionaries
+[Top](#top)
 
 ```python
 # dictionaries are unordered mappings for storing objects to keys
@@ -944,7 +981,9 @@ d.values()
 # dict_values(['NEW ITEM', 200, 300])
 ```
 
-## Tuples
+<a name="tuples"></a>
+## 🔴 5. Tuples
+[Top](#top)
 
 ```python
 # very simliar to lists, except they are immutable
@@ -1034,7 +1073,9 @@ set(list1)
 # set now only contains unique elements
 ```
 
-## Files
+<a name="files"></a>
+## 🔴 6. Files
+[Top](#top)
 
 ```python
 # python uses file objects to interact with external files on your computer
@@ -1152,7 +1193,9 @@ print(myfile.read())
 myfile.close()
 ```
 
-## Comparison Operators
+<a name="comp_operator"></a>
+## 🔴 7. Comparison Operators
+[Top](#top)
 
 ```python
 # allows us to compare variables and output a boolean (True or False)
@@ -1197,6 +1240,10 @@ Chained Comparison Operators
 ```
 
 ## if, elif, else Statements
+
+<a name="if"></a>
+## 🔴 8. if, elif, else Statements
+[Top](#top)
 
 ```python
 # if = if this happens, perform this action
@@ -1262,7 +1309,9 @@ else:
 # Welcome George!
 ```
 
-## for Loops
+<a name="for_loops"></a>
+## 🔴 9. for Loops
+[Top](#top)
 
 ```python
 # for loops act as an iterator in python
@@ -1500,7 +1549,9 @@ sorted(d.values())
 # using the sorted() method to obtain a sorted list
 ```
 
-## while Loops
+<a name="while_loops"></a>
+## 🔴 10. while Loops
+[Top](#top)
 
 ```python
 # while statement will repeatedly execute as long as condition is true
@@ -1629,7 +1680,9 @@ Breaking because x==3
 # then breaks out of this loop (stops executing)
 ```
 
-## Useful Operators
+<a name="useful_operators"></a>
+## 🔴 11. Useful Operators
+[Top](#top)
 
 range
 
@@ -1808,7 +1861,11 @@ input('Enter something in this box: ')
 # Enter something in this box: [hello]
 # 'hello'
 ```
-### List Comprehensions
+
+<a name="list_comprehension"></a>
+## 🔴 12. List Comprehensions
+[Top](#top)
+
 
 ```q
 # list comprehensions allow us to build lists using different notation
@@ -1967,8 +2024,9 @@ st = 'Create a list of the first letters of every word in this string'
 # return variable index position 0 (word) for every variable (word) in split string
 # whole thing is encased with [ ] because you are returning a list
 ```
-
-Guessing Game Challenge
+<a name="guessing_game"></a>
+## 🔴 13. Guessing Game Challenge
+[Top](#top)
 
 ```python
 # picks random integer from 1 to 100
@@ -2015,11 +2073,60 @@ while True
     break
     
 # input() allows user to input something
-# inputs are strings, so you need to cast as an int()
+# inputs are strings, so you need to cast input as an int()
 # store this as variable guess
-# if variable (guess) is out of bounds, print 
+# if variable (guess) is out of bounds, print "out of bounds"
+# then continue back to input while loop
 ```
 
+4. Write while loop that compares the players guess to our number. If guess correctly, break from loop. Otherwise tell player if warmer or colder, and continue asking for guesses
+
+```python
+# load random module
+import random
+
+# generate random int from 1-100 and save as variable num
+num = random.randint(1,100)
+
+# our guess counter
+guesses = [0]
+
+while True:
+
+    # we can copy the code from above to take an input
+    guess = int(input("I'm thinking of a number between 1 and 100.\n  What is your guess? "))
+    
+    if guess < 1 or guess > 100:
+        print('OUT OF BOUNDS! Please try again: ')
+        continue # continue back up to while loop to run again
+    
+    # here we compare the player's guess to our number
+    if guess == num:
+        print(f'CONGRATULATIONS, YOU GUESSED IT IN ONLY {len(guesses)} GUESSES!!')
+        break
+        
+    # if guess is incorrect, add guess to the list
+    guesses.append(guess)
+    
+    # when testing the first guess, guesses[-2]==0, which evaluates to False
+    # and brings us down to the second section
+    
+    if guesses[-2]:  
+        if abs(num-guess) < abs(num-guesses[-2]):
+            print('WARMER!')
+        else:
+            print('COLDER!')
+   
+    else:
+        if abs(num-guess) <= 10:
+            print('WARM!')
+        else:
+            print('COLD!')
+```
+
+## Methods
+
+```python
 
 
 
