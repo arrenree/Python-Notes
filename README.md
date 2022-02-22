@@ -3,7 +3,17 @@
 
 # Contents
 
-## 1. [Basic Math & Variable Assignments](#basic_math)
+### 1. [Basic Math & Variable Assignments](#basic_math)
+1. [Floor Division](#floor)
+2. [Modulo](#modulo)
+3. [Powers](#powers)
+4. [Square Root](#square_root)
+5. [Variable Assignment](#var_assign)
+6. [Variable Reassignment](#var_reassign)
+7. [Dynamic Typing](#dynamic_typing)
+8. [Datatypes](#datatypes)
+
+
 
 ## 2. [Strings](#strings)
 
@@ -34,7 +44,8 @@
 ## 🔴 1. Basic Math & Variable Assignments
 [Top](#top)
 
-Floor Division
+<a name="floor"></a>
+### Floor Division
 
 ```python
 7 // 4
@@ -42,8 +53,8 @@ Floor Division
 # // = floor division. truncates decimal without rounding
 # should be 1.75, but rounds to 1
 ```
-
-Modulo
+<a name="Modulo"></a>
+### Modulo
 
 ```python
 7 % 3
@@ -52,15 +63,15 @@ Modulo
 # useful in checking if number is even or odd
 # if returns anything other than 0 = odd
 ```
-
-Powers
+<a name="powers"></a>
+### Powers
 
 ```python
 2 ** 3
 # 8
 ```
-
-Square Root
+<a name="square_root"></a>
+### Square Root
 
 ```python
 4 ** 0.5
@@ -68,8 +79,8 @@ Square Root
 # 4 to the power of 0.5 = square root
 # returns a float
 ```
-
-Variable Assignments
+<a name="var_assign"></a>
+### Variable Assignments
 
 ```python
 # cannot start with number
@@ -90,7 +101,8 @@ a = 5
 # we've assigned int object 5 to variable name a
 ```
 
-Variable Reassignment
+<a name="var_reassign"></a>
+### Variable reassignments
 
 ```python
 a = 10
@@ -103,16 +115,16 @@ a += 10
 # 30
 # same as a = a + 10
 ```
-
-Dynamic Typing
+<a name="dynamic_typing"></a>
+### Dynamic Typing
 
 ```python
 # python uses dynamic typing, which means you can reassign variables to different data types
 # initially assigned an int
 # reassigned as string
 ```
-
-Datatypes
+<a name="datatypes"></a>
+### Datatypes
 
 ```python
 # int (for integer)
