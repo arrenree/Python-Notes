@@ -58,6 +58,9 @@
 
 ## 13. [Guessing Game Challenge](#guessing_game)
 
+## 14. [Methods](#methods)
+
+<hr>
 
 <a name="basic_math"></a>
 ## 🔴 1. Basic Math & Variable Assignments
@@ -2170,11 +2173,82 @@ while True:
             print('COLD!')
 ```
 
-## Methods
+<a name="methods"></a>
+## 🔴 14. Methods
+[Top](#top)
 
 ```python
+# methods are functions built into objects
+# perform specific actions on an object and can also take arguments (like a function)
+# can see all methods available via tab or . 
 
+list1 = [1,2,3,4]
+list1
 
+# once you type list1., you'll see list of possible methods
+# append, cout, extend, insert, etc.
+```
 
+append
 
+```python
+list1 = [1,2,3,4]
+list1.append(5)
+# [1,2,3,4,5]
+
+# append allows us to add elements to end of a list
+```
+
+count
+
+```python
+list1 = [1,2,3,4]
+list1.append(2)
+# 1
+
+# count() will check number of occurences of element in list
+```
+
+<a name="Functions"></a>
+## 🔴 15. Functions
+[Top](#top)
+
+```python
+# functions group together statements so they can be run more than once
+# allow us to specify parameters that serrve as inputs to the functions
+# functions allow you to call the same block of code multiple times
+```
+
+```python
+def say_hello():
+    print('hello')
+
+# call function
+
+say_hello()
+# hello
+
+# to call function, need to remember to include the ()
+# def = defines the name of your function
+# say_hello is the NAME of your function
+# arguments would go inside () - if any
+# arguments = inputs for your function
+# MUST INDENT - python takes whitespace seriously
+```
+
+Accepting Parameters (arguments)
+
+```python
+def greeting(name):
+    print(f'Hello {name}')
+
+greeting('Allen')
+# Hello Allen
+
+# greeting is name of your function
+# name = argument you can input
+# you want to print 'hello + insert argument' 
+# to CALL function, use greeting()
+# and enter your name as the argument
+```
 
