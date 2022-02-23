@@ -1,8 +1,6 @@
 # Python Notes by Allen
 <a name="top"></a>
 
-# Contents
-
 ### 1. [Basic Math & Variable Assignments](#basic_math)
 1. [Floor Division](#floor)
 2. [Modulo](#modulo)
@@ -85,7 +83,19 @@
 9. [Dictionary Methods](#for_dict_methods)
 
 ### 11. [while Loops](#while_loops)
+1. [break, continue, pass](#while_break)
+2. [while Loops, if, else](#while_if)
+
 ### 12. [Useful Operators](#useful_operators)
+1. [range](#op_range)
+2. [enumerate](#op_enumerate)
+3. [zip](#op_zip)
+4. [in and not in Operator](#op_in)
+5. [min and max](#op_min)
+6. [Random - Shuffle](#op_shuffle)
+7. [Random - Randint](#op_randint)
+8. [input](#op_input)
+
 ### 13. [List Comprehensions](#list_comprehension)
 ### 14. [Guessing Game Challenge](#guessing_game)
 ### 15. [Methods](#methods)
@@ -1721,7 +1731,8 @@ else:
 # then it executes the else statement
 ```
 
-break, continue, pass
+<a name="while_break"></a>
+### break, continue, pass
 
 ```python
 # break - breaks out of the current loop
@@ -1763,7 +1774,9 @@ continuing...
 # continues the outer while loop
 # and since 3 < 5, prints x is less than 5, etc.
 ```
-while loop + if + else + break
+
+<a name="while_if"></a>
+### while Loop, if, else
 
 ```python
 x = 0
@@ -1797,7 +1810,8 @@ Breaking because x==3
 ## 🔴 12. Useful Operators
 [Top](#top)
 
-range
+<a name="op_range"></a>
+### Range
 
 ```python
 # range() allows you to quickly generate a list of integers
@@ -1826,7 +1840,8 @@ list(range(0,11,2))
 # [0, 2, 4, 6, 8, 10]
 ```
 
-enumerate
+<a name="op_enumerate"></a>
+### Enumerate
 
 ```python
 index_count = 0
@@ -1875,7 +1890,9 @@ At index 4 the letter is e
 # enumerate turns string 'abcde' into a list of tuples (index position, letter)
 # then use for loop for tuple unpacking! (num,letter) 
 ```
-zip
+
+<a name="op_zip"></a>
+### Zip
 
 ```python
 # zip() function allows you to create a list of tuples by "zipping" together 2 lists
@@ -1904,7 +1921,8 @@ For this tuple, first item was 4 and second item was d
 For this tuple, first item was 5 and second item was e
 ```
 
-in operator
+<a name="op_in"></a>
+### in/not in operator
 
 ```python
 
@@ -1926,7 +1944,8 @@ not in
 # True
 ```
 
-min and max
+<a name="op_min"></a>
+### Min and Max
 
 ```python
 mylist = [10,20,30,40,100]
@@ -1935,10 +1954,10 @@ min(mylist)
 
 max(mylist)
 # 100
-
 ```
 
-random - shuffle
+<a name="op_shuffle"></a>
+### Random - Shuffle
 
 ```python
 # python comes with built in random library
@@ -1954,7 +1973,8 @@ mylist
 # [40, 10, 100, 30, 20]
 ```
 
-random - randint
+<a name="op_randint"></a>
+### Random - Randint
 
 ```python
 from random import randint
@@ -1965,7 +1985,8 @@ randint(0,100)
 # 25
 ```
 
-input
+<a name="op_input"></a>
+### Input
 
 ```python
 
