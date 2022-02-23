@@ -47,10 +47,14 @@
 8. [Nested Lists](#list_nested)
 9. [List Comprehensions](#list_comp)
 
-
-
-
 ### 4. [Dictionaries](#dictionaries)
+1. [Retrieving Values](#dict_retrieve)
+2. [Retrieving Nested Values](#dict_retrieve_nest)
+3. [Creating Keys by Assignment](#dict_key_assign)
+4. [Append](#dict_append)
+5. [Upsert](#dict_upsert)
+
+
 ### 5. [Tuples](#tuples)
 ### 6. [Files](#files)
 ### 7. [Comparison Operators](#comp_operator)
@@ -937,6 +941,9 @@ first_col
 # lists are ordered sequence; can be indexed or sliced
 ```
 
+<a name="dict_retrieve"></a>
+### Retrieving Values
+
 ```python
 my_dict = {'key1':'value1','key2':'value2'}
 my_dict['key1']
@@ -954,7 +961,8 @@ prices_lookup['apple']
 # this is the power of dictionaries
 ```
 
-Dictionary - Retrieving Items in nested dictionary
+<a name="dict_retrieve_nest"></a>
+### Retrieving Nested Values
 
 ```python
 d = {'k1':123,'k2':[0,1,2],'k3':{'insidekey':100}}
@@ -989,7 +997,8 @@ my_dict['key1']
 # -= is the same as key1 = key1 - 100
 ```
 
-Dictionary - Creating Keys by Assignment
+<a name="dict_key_assign"></a>
+### Creating Keys by Assignment
 
 ```python
 # lets say you have an empty dictionary
@@ -1006,7 +1015,8 @@ d
 # {'animal': 'Dog', 'answer': 42}
 ```
 
-Dictionary - Appending Items
+<a name="dict_append"></a>
+### Append
 
 ```python
 d = {'k1': 100,'k2':200}
@@ -1017,7 +1027,8 @@ d
 # added key/value pair of k3/300
 ```
 
-Upserting items to dict
+<a name="dict_upsert"></a>
+### Upsert
 
 ```python
 d = {'k1': 100,'k2':200}
