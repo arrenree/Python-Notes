@@ -54,17 +54,30 @@
 4. [Append](#dict_append)
 5. [Upsert](#dict_upsert)
 
-
 ### 5. [Tuples](#tuples)
-### 6. [Files](#files)
-### 7. [Comparison Operators](#comp_operator)
-### 8. [if, elif, else Statements](#if)
-### 9. [for Loops](#for_loops)
-### 10. [while Loops](#while_loops)
-### 11. [Useful Operators](#useful_operators)
-### 12. [List Comprehensions](#list_comprehension)
-### 13. [Guessing Game Challenge](#guessing_game)
-### 14. [Methods](#methods)
+
+### 6. [Sets](#sets)
+
+### 7. [Files](#files)
+1. [Opening and Reading](#files_opening)
+2. [Readlines Method](#files_readlines)
+3. [Writing to File](#files_writing)
+4. [Appending to File](#files_append)
+
+### 8. [Comparison Operators](#comp_operator)
+1. [Equals](#comp_equals)
+2. [Does not Equal](#comp_notequals)
+3. [Chained Comparison Operators](#comp_chain)
+4. [Appending to File](#files_append)
+
+
+### 9. [if, elif, else Statements](#if)
+### 10. [for Loops](#for_loops)
+### 11. [while Loops](#while_loops)
+### 12. [Useful Operators](#useful_operators)
+### 13. [List Comprehensions](#list_comprehension)
+### 14. [Guessing Game Challenge](#guessing_game)
+### 15. [Methods](#methods)
 
 <hr>
 
@@ -1100,7 +1113,11 @@ t.count(1)
 
 # 1 appears 3x in the tupple
 ```
-## Sets
+
+<a name="Sets"></a>
+## 🔴 6. Sets
+[Top](#top)
+
 
 ```python
 # sets are unordered collection of unique elements
@@ -1144,7 +1161,7 @@ set(list1)
 ```
 
 <a name="files"></a>
-## 🔴 6. Files
+## 🔴 7. Files
 [Top](#top)
 
 ```python
@@ -1154,7 +1171,8 @@ set(list1)
 # 2) then can READ file
 ```
 
-Files - Opening + Reading
+<a name="files_opening"></a>
+### Opening and Reading
 
 ```python
 # create simple test.txt file
@@ -1195,7 +1213,8 @@ myfile.read()
 # 'Hello, this is a quick test file.'
 ```
 
-Readlines Method
+<a name="files_readlines"></a>
+### Readlines Method
 
 ```python
 # readlines returns a list of the lines in the file
@@ -1210,7 +1229,8 @@ myfile.readlines()
 myfile.close()
 ```
 
-Writing to a File
+<a name="files_writing"></a>
+### Writing to File
 
 ```python
 # by default, the open() function only allows us to read the file
@@ -1234,7 +1254,9 @@ myfile.read() # reads file
 
 myfile.close() # good habit to close files when finished
 ```
-Appending to a File
+
+<a name="files_append"></a>
+### Appending to File
 
 ```python
 # passing argument 'a' opens the file and puts the pointer at the end
@@ -1264,21 +1286,23 @@ myfile.close()
 ```
 
 <a name="comp_operator"></a>
-## 🔴 7. Comparison Operators
+## 🔴 8. Comparison Operators
 [Top](#top)
 
 ```python
 # allows us to compare variables and output a boolean (True or False)
 ```
 
-Equals
+<a name="comp_equals"></a>
+### Equals
 
 ```python
 2 == 2
 # True
 ```
 
-Does not equal
+<a name="comp_notequals"></a>
+### Does not Equal
 
 ```python
 2 != 3
@@ -1288,7 +1312,8 @@ Does not equal
 # False. 2 does not equal 2. Statement is false.
 ```
 
-Chained Comparison Operators
+<a name="comp_chain"></a>
+### Chained Comparison Operators
 
 ```python
 1 < 2 < 3
@@ -1309,10 +1334,8 @@ Chained Comparison Operators
 # OR = only one of the statements need to be true
 ```
 
-## if, elif, else Statements
-
 <a name="if"></a>
-## 🔴 8. if, elif, else Statements
+## 🔴 9. if, elif, else Statements
 [Top](#top)
 
 ```python
@@ -1380,7 +1403,7 @@ else:
 ```
 
 <a name="for_loops"></a>
-## 🔴 9. for Loops
+## 🔴 10. for Loops
 [Top](#top)
 
 ```python
@@ -1620,7 +1643,7 @@ sorted(d.values())
 ```
 
 <a name="while_loops"></a>
-## 🔴 10. while Loops
+## 🔴 11. while Loops
 [Top](#top)
 
 ```python
@@ -1751,7 +1774,7 @@ Breaking because x==3
 ```
 
 <a name="useful_operators"></a>
-## 🔴 11. Useful Operators
+## 🔴 12. Useful Operators
 [Top](#top)
 
 range
@@ -1933,7 +1956,7 @@ input('Enter something in this box: ')
 ```
 
 <a name="list_comprehension"></a>
-## 🔴 12. List Comprehensions
+## 🔴 13. List Comprehensions
 [Top](#top)
 
 
@@ -2095,7 +2118,7 @@ st = 'Create a list of the first letters of every word in this string'
 # whole thing is encased with [ ] because you are returning a list
 ```
 <a name="guessing_game"></a>
-## 🔴 13. Guessing Game Challenge
+## 🔴 14. Guessing Game Challenge
 [Top](#top)
 
 ```python
@@ -2195,7 +2218,7 @@ while True:
 ```
 
 <a name="methods"></a>
-## 🔴 14. Methods
+## 🔴 15. Methods
 [Top](#top)
 
 ```python
@@ -2231,7 +2254,7 @@ list1.append(2)
 ```
 
 <a name="Functions"></a>
-## 🔴 15. Functions
+## 🔴 16. Functions
 [Top](#top)
 
 ```python
