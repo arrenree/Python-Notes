@@ -37,6 +37,19 @@
 21. [f String Literal](#string_fstring)
 
 ### 3. [Lists](#lists)
+1. [Indexing and Slicing](#list_index_slice)
+2. [List Concatenation](#list_con)
+3. [Duplicating Strings](#list_dup)
+4. [Amend / Append](#list_append)
+5. [Remove](#list_remove)
+6. [Sort](#list_sort)
+7. [Reverse](#list_reverse)
+8. [Nested Lists](#list_nested)
+9. [List Comprehensions](#list_comp)
+
+
+
+
 ### 4. [Dictionaries](#dictionaries)
 ### 5. [Tuples](#tuples)
 ### 6. [Files](#files)
@@ -700,7 +713,8 @@ len(my_list)
 # 3 items in list
 ```
 
-List - Indexing & Slicing
+<a name="list_index_slice"></a>
+### Indexing and Slicing
 
 ```python
 mylist = ['one','two','three']
@@ -724,7 +738,8 @@ mylist[:2]
 # grab everything UP, but not including index 2
 ```
 
-Lists - Concatenating 2 Lists
+<a name="list_con"></a>
+### Lists Concatenation
 
 ```python
 mylist = ['one','two,'three']
@@ -743,7 +758,8 @@ mylist
 
 ```
 
-Lists - Duplicating Strings
+<a name="list_dup"></a>
+### Duplicating Strings
 
 ```python
 list = ['alpha','bravo']
@@ -751,7 +767,8 @@ list * 2
 # ['alpha', 'bravo', 'alpha', 'bravo']
 ```
 
-Lists - Indexing to amend elements
+<a name="list_append"></a>
+### Amend / Append
 
 ```python
 new_list[0] = 'ONE ALL CAPS'
@@ -771,7 +788,8 @@ new_list
 # appends in place, which means it permanently changes the list
 ```
 
-Lists - Remove Elements
+<a name="list_remove"></a>
+### Remove
 
 ```python
 new_list = ['ONE ALL CAPS', 'two','three','four','five','six']
@@ -804,7 +822,8 @@ new_list
 # removes element 0 = 'ONE ALL CAPS'
 ```
 
-Lists - Sorting
+<a name="list_sort"></a>
+### Sort
 
 ```python
 new_list = ['a','e','x','b','c']
@@ -847,7 +866,8 @@ sorted_num_list
 # [1,3,4,8]
 ```
 
-Lists - Reverse
+<a name="list_reverse"></a>
+### Reverse
 
 ```python
 num_list.reverse()
@@ -855,7 +875,8 @@ num_list
 # [8,4,3,1]
 ```
 
-Lists - Nested Lists / Matrix
+<a name="list_nested"></a>
+### Nested Lists
 
 ```python
 list_1=[1,2,3]
@@ -882,8 +903,8 @@ matrix[0][0]
 
 # grab the first element of the first row
 ```
-
-List - Comprehensions
+<a name="list_comp"></a>
+### List Comprehensions
 
 ```python
 # advanced feature which allow for quick construction of lists
