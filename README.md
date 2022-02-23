@@ -72,7 +72,18 @@
 
 
 ### 9. [if, elif, else Statements](#if)
+
 ### 10. [for Loops](#for_loops)
+1. [for Loop](#for_loop)
+2. [for Loop, if Statement](#for_if)
+3. [for Loop, if, else Statements](#for_if_else)
+4. [Running Tally](#running_tally)
+5. [for Loop with Strings](#for_strings)
+6. [for Loop with Tuples](#for_tuple)
+7. [Tuple Unpacking](#for_tuple)
+8. [for Loop with Dictionaries](#for_dict)
+9. [Dictionary Methods](#for_dict_methods)
+
 ### 11. [while Loops](#while_loops)
 ### 12. [Useful Operators](#useful_operators)
 ### 13. [List Comprehensions](#list_comprehension)
@@ -1416,7 +1427,8 @@ for item in object:
 # variable name used for the item is up to coder
 ```
 
-for loop
+<a name="for_loop"></a>
+### for Loop
 
 ```python
 list1 = [1,2,3,4]
@@ -1430,7 +1442,8 @@ for num in list1:
 # 4
 ```
 
-for loop + if 
+<a name="for_if"></a>
+### for Loop, if Statements
 
 ```python
 # print only even numbers
@@ -1445,7 +1458,8 @@ for num in list1:
 # 4
 ```
 
-for loop  + if + else
+<a name="for_if_else"></a>
+### for Loop, if, else Statements
 
 ```python
 list1 = [1,2,3,4]
@@ -1462,7 +1476,8 @@ for num in list1:
 # 4
 ```
 
-for loop running tally
+<a name="running_tally"></a>
+### Running Tally
 
 ```python
 list1 = [1,2,3,4,5,6,7,8,9,10]
@@ -1496,7 +1511,8 @@ print(list_sum)
 # 55
 ```
 
-for loop with strings
+<a name="for_strings"></a>
+### for Loop with Strings
 
 ```python
 
@@ -1513,7 +1529,8 @@ for letter in 'hello':
 # print out each element
 ```
 
-for loop with tuple
+<a name="for_tuple"></a>
+### for Loop with Tuples
 
 ```python
 tup = (1,2,3,4,5)
@@ -1531,7 +1548,8 @@ for t in tup:
 # print the element
 ```
 
-Tuple unpacking
+<a name="for_tuple"></a>
+### Tuple Unpacking
 
 ```
 # tuples have a special quality when it comes to for loops
@@ -1567,7 +1585,8 @@ for (t1,t2) in list2:
 # for each tuple in list, print first element of the tuple
 ```
 
-for loop with dictionaries
+<a name="for_dict"></a>
+### for Loop with Dictionaries
 
 ```python
 
@@ -1584,7 +1603,8 @@ for item in d:
 # notice this only prints the keys
 ```
 
-Dictionary methods
+<a name="for_dict_methods"></a>
+### Dictionary methods
 
 ```python
 # .items() method
