@@ -2431,3 +2431,26 @@ def check_even_list(num_list):
     return False
 ```
 
+Return all even numbers in list
+
+```python
+
+def check_even_list(num_list):
+
+    even_numbers = []
+    
+    # Go through each number
+    for number in num_list:
+        # Once we get a "hit" on an even number, we append the even number
+        if number % 2 == 0:
+            even_numbers.append(number)
+        # Don't do anything if not even
+        else:
+            pass
+    # notice the indention. this ensures we run thru entire for loop
+    return even_numbers
+    
+check_even_list([1,2,3,4,5,6])
+# [2, 4, 6]
+```    
+    
