@@ -2535,5 +2535,279 @@ check_even_list([1,2,3,4,5,6])
 # [2, 4, 6]
 ```
 
+Tuple Unpacking
+
+```python
+# refresher on Tuples
+
+stock_prices = [('AAPL',200),('GOOG',300),('MSFT', 400)]
+# list of tuples
+
+for item in stock_prices:
+    print(item)
+
+# ('AAPL', 200)
+# ('GOOG', 300)
+# ('MSFT', 400)
+```
+
+```python
+# only print first element of each tuple
+
+for stock, price in stock_prices:
+    print(stock)
+
+# AAPL
+# GOOG
+# MSFT
+```
+
+```python
+# only print second element of each tuple
+
+for stock, price in stock_prices:
+    print(price)
+
+# 200
+# 300
+# 400
+```
+
+Employee of Month Case Study
+
+```python
+# employee of the month function
+# return both name and number of hours
+# winner = most number of hours worked
+
+work_hours = [('Abby',100),('Billy',400),('Cassie',800)]
+
+def employee_check(work_hours):
+
+    # set some max value to initially beat, like 0 hours
+    current_max = 0
+    
+    # set some empty value before the loop
+    employee_of_mmonth = ''
+    
+    for employee, hours in work_hours
+        if hours > current_max: # value in tuple > value in tally
+            current_max = hours # override hours to max hours
+            employee_of_month = employee # override employee to name
+        else:
+            pass # do nothing, go back to top of for loop
+  
+    
+    return (employee_of_month, current_max)
+    # notice indentation here
+
+employee_check(work_hours)
+('Cassie',800)
+```
+
+3 Card Monty Case Study
+
+```python
+# 3 positions in list, one of which is 'O'
+# a function will shuffle list
+# another will take players guess
+# last one will check to see if it is correct
+
+# how to shuffle a list 
+
+example = [1,2,3,4,5]
+
+from random import shuffle
+
+shuffle(example)
+example
+# [3,1,4,5,2]
+
+# you've successfully shuffled the list
+```
+
+```python
+# 1. Create list, and shuffle it.
+
+mylist = [' ','O',' ']
+
+def shuffle_list(mylist):
+    shuffle(mylist)
+    
+    return my list
+
+# takes in list, and returns shuffled version
+# shuffle is only in place, so will need to save
+# to new variable if want to save output
+
+# call function to shuffle list
+
+shuffle_list(mylist)
+# [' ',' ', 'O']
+```
+
+```python
+
+#2. Create function for player guess
+# if out of bounds, have them guess again
+
+def player_guess():
+
+    guess = ' '
+    # create placeholder for player's guess
+    
+    while guess not in ['0','1','2']:
+    # if guess is out of bounds
+    # guess = variable
+    
+        guess = input("Pick a number: 0, 1, or 2: ")
+        # input() allows players to enter a string
+        # guess becomes, pick again
+        
+    return int(guess)
+    # otherwise if the guess is within bounds, return it
+
+# call function
+player_guess()
+
+# Pick a number: 0, 1, or 2: [1]
+1
+```
+
+```python
+# 3. check user's guess
+
+def check_guess(mylist, guess):
+    if mylist[guess] == 'O':
+        print('Correct Guess!')
+    else:
+        print('Wrong! Better luck next time')
+        print(mylist)
+        
+# mylist = your original list [' ','O',' ']
+# guess = players' input on index location (0, 1, or 2)
+```
+
+```python
+# 4. Combined your functions together!
+
+# initial list
+mylist = [' ','O',' ']
+
+# shuffle list
+mixedup_list = shuffle_list(mylist)
+
+# shuffle list, and save to new variable
+# shuffle is only in place (doesnt save)
+
+# players guess
+guess = player_guess()
+
+# check user's guess
+# notice this function takes in the input
+# based on the output of other functions
+
+check_guess(mixedup_list, guess)
+
+# Pick a number: 0, 1 or 2: 1
+# Wrong! Better luck next time
+# [' ', ' ', 'O']
+```
+
+Function Example: Lesser of 2 evens
+
+```python
+
+# write func that returns lesser of 2 given numbers
+# if both are even, but returns the greater one
+# if one or both numbers are odd
+
+# expected output:
+
+lesser_of_two(2,4) --> 2
+lesser_of_two(2,5) --> 5
+```
+
+```python
+def lesser_of_two(a,b):
+    
+    # check if both even
+    if a%2 == 0 and b%2 == 0:
+        
+        # return the lesser of the 2 evens
+        return min(a,b)
+    
+    # otherwise if 1 even 1 odd
+    else:
+        
+        # return the greater of the two
+        return max(a,b)
+
+# call function to check   
+    
+lesser_of_two(2,4)
+# 2
+
+lesser_of_two(2,5)
+# 5
+```
+
+Function Example: Checks if both strings start with same letter
+
+```python
+# write func that takes 2 word string
+# and returns TRUE if both words begin with same letter
+
+# expected output:
+animal_crackers('levelheaded llama') --> True
+animal_crackers('Crazy Kangaroo') --> False
+```
+
+```python
+def animal_crackers(text):
+    wordlist = text.split()
+    # input text, split it, and save to new variable wordlist
+    
+    return wordlist[0][0] == wordlist[1][0]
+    
+    # checks first word, first letter = second word, first letter
+    # checks using index position
+
+# call function to check
+animal_crackers('levelheaded llama')
+# True
+
+animal_crackers('Crazy Kangaroo')
+# False
+```
+
+Functions Example: Makes Twenty
+
+```python
+# given 2 ints, return TRUE if sum = 20
+# return TRUE if one of int = 20
+# if not, return FALSE
+
+def makes_twenty(n1,n2):
+    return (n1+n2)==20 or n1==20 or n2==20
+    
+    # since you are returning an equality, output
+    # will be either true or false
+    
+# 3 possible scenarios
+# num 1 is 20, num 2 is 20, or their sum is 20
+# by setting each of 3 == TRUE, if not true, will output FALSE
+
+# call func to check
+
+makes_twenty(20,10)
+# True
+
+makes_twenty(2,3)
+# False
+```
+
+
+
 
 
