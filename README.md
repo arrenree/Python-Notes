@@ -97,8 +97,21 @@
 8. [input](#op_input)
 
 ### 13. [List Comprehensions](#list_comprehension)
+
 ### 14. [Guessing Game Challenge](#guessing_game)
+
 ### 15. [Methods](#methods)
+
+### 16. [Functions](#functions)
+1. [Intro to Functions](#func_intro)
+2. [Functions with Arguments](#func_arg)
+3. [Return vs Print](#func_return)
+4. [Check if number is even](#func_num_even)
+5. [Check if any number in list is even](#func_num_list_even)
+6. [Return even numbers in list](#func_return_num)
+
+
+
 
 <hr>
 
@@ -2294,15 +2307,29 @@ list1.append(2)
 # count() will check number of occurences of element in list
 ```
 
-<a name="Functions"></a>
+<a name="functions"></a>
 ## 🔴 16. Functions
 [Top](#top)
+
+<a name="func_intro"></a>
+### Intro to Functions
 
 ```python
 # functions group together statements so they can be run more than once
 # allow us to specify parameters that serrve as inputs to the functions
 # functions allow you to call the same block of code multiple times
 ```
+
+```python
+
+def name_of_function():
+    '''
+    docstring explains function
+    '''
+    
+# arguments or parameters go into ()
+# must end with : then has to be indented
+```    
 
 ```python
 def say_hello():
@@ -2321,7 +2348,8 @@ say_hello()
 # MUST INDENT - python takes whitespace seriously
 ```
 
-Functions with Arguments
+<a name="func_arg"></a>
+### Functions with Arguments
 
 ```python
 def greeting(name):
@@ -2332,14 +2360,18 @@ greeting('Allen')
 
 # greeting is name of your function
 # name = argument you can input
+# will insert argument (name) in the { } in function
 # you want to print 'hello + insert argument' 
 # to CALL function, use greeting()
 # and enter your name as the argument
 ```
 
-Return
+<a name="func_return"></a>
+### Return vs Print
 
 ```python
+# in general, use return instead of print to send back reesult of function
+# allows us to assign output of function to new variable
 # return allows a function to return a result that can then be STORED as a variable
 
 def add_num(num1,num2):
@@ -2368,8 +2400,9 @@ What's the diff btwn return and print?
 # return = allows you to SAVE result of function output as a variable
 # print = simply displays output to you (but doesnt save for future use)
 ```
-
-Check if number is even
+ 
+<a name="func_num_even"></a>
+### Check if number is even
 
 ```python
 def even_check(number):
@@ -2387,10 +2420,12 @@ False
 # since num mod 2 = 0 means nothing leftover = even
 ```
 
-Check if any number in list is even
+<a name="func_num_list_even"></a>
+### Check if any number in list is even
 
 ```python
-# lets return boolean if any number is even
+# lets return TRUE if any number in list is even
+# if no even numbers, return FALSE
 # return breaks out of the loop and exits the function
 ```
 
@@ -2399,15 +2434,18 @@ Check if any number in list is even
 # WRONG example first
 
 def check_even_list(num_list):
-    # Go through each number
+    
     for number in num_list:
-        # Once we get a "hit" on an even number, we return True
+        # Go through each number in num_list
+        # the first time we hit an even num, we return TRUE
         if number % 2 == 0:
             return True
-        # This is WRONG! This returns False at the very first odd number!
-        # It doesn't end up checking the other numbers in the list!
+        
         else:
             return False
+            # This is WRONG! This returns False at the very first odd number!
+            # It doesn't end up checking the other numbers in the list!
+
 # UH OH! It is returning False after hitting the first 1
 check_even_list([1,2,3])
 
@@ -2427,30 +2465,51 @@ def check_even_list(num_list):
         # Don't do anything if its not even
         else:
             pass
-    # Notice the indentation! This ensures we run through the entire for loop    
+            # pass means don't do anything (if odd, do nothing)
+            # pass allows us to run through entire loop
+    
     return False
+    
+    # Notice the indentation! lines up with above for loop
+    # This ensures we run through the entire for loop first
+    # before we break out, and return False
+
 ```
 
-Return all even numbers in list
+<a name="func_return_num"></a>
+### Return all even numbers in list
 
 ```python
+# no longer returning TRUE or FALSE
+# instead, returning list of even numbers
 
 def check_even_list(num_list):
 
     even_numbers = []
+    # empty placeholder list for even numbers
     
     # Go through each number
     for number in num_list:
+        
         # Once we get a "hit" on an even number, we append the even number
         if number % 2 == 0:
             even_numbers.append(number)
+        
         # Don't do anything if not even
         else:
             pass
-    # notice the indention. this ensures we run thru entire for loop
+            # pass = if not even, do nothing
+            # return to top of loop, runs through entire loop
+    
     return even_numbers
+    # notice the indention. 
+    # this ensures we run thru entire for loop BEFORE returning list
+    # once entire loop is finished, return the even_numbers list  
+    
     
 check_even_list([1,2,3,4,5,6])
 # [2, 4, 6]
-```    
-    
+```
+
+
+
