@@ -2807,6 +2807,177 @@ makes_twenty(2,3)
 # False
 ```
 
+Function Example: Old Macdonald
+
+```python
+# write func that capitalizes the 1st and 4th letters of a name
+
+def old_mac(name):
+    if len(name) > 3:
+    # check if length is enough to capitalize 1st and 4th letter
+
+        return name[:3].capitalize() + name[3:].capitalize()
+        # return name, but capitalize index 0, keep returning until 3rd index
+        # Mac (up to, but not including 3rd element)
+        # concatenate with name, capitalize 3rd index position (D)
+        # and return rest of word
+        
+    else:
+        return 'Name too short"
+ 
+# call func to check
+
+old_mac('macdonald')
+# MacDonald
+```
+
+Function Example: Master Yoda
+
+```python
+# given sentence, verse the words 
+
+def master_yoda(text):
+    return ' '.join(text.split()[::-1])
+
+# input string, then split it
+# [::-1] means using string slicing, -1 step to reverse string
+# then you need to join these individual strings together
+# and return it
+
+# call func to check
+
+master_yoda('i am home')
+# 'home am i'
+```
+
+Function Example: Almost there
+
+```python
+# given int, return TRUE if n is within 10 or either 100 or 200
+
+def almost_there(n):
+    return ((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
+    
+    # returning a comparison operator means you will return TRUE or FALSE
+    # need abs in case number is greater than 100 or 200, like 102 or 203
+
+# call func to check
+
+almost_there(103)
+# True
+```
+
+Function Example: 3 next to 3
+
+```python
+
+# given a list of ints, return TRUE if array contains 3 next to a 3
+# an array is a data structure that stores same data type (for ex, a list storing ints)
+
+
+def has_33(name):
+    for i in range(0, len(nums)-1):
+    
+        # if nums[i] == 3 and nums [i+1] == 3:
+        # essentially, if index position i = 3, and the next position also = 3
+        
+        if nums[i:i+2] == [3,3]:
+            return True
+    
+    return False
+    
+# call func to check
+
+has_33([1,3,3])
+# True
+```
+
+Function Example: Duplicate Strings
+
+```python
+
+# given a string, return a string where every char is repeated 3x
+
+def paper_doll(text):
+    
+    result = ''
+    # placeholder list
+    
+    for char in text:
+        result += char *3
+    
+    # for every element in input string
+    # the result = result + char x 3
+    # loop through entire string
+    
+    return result
+    
+    # return the result list
+    
+# call func
+
+paper_doll('hello')
+# 'hhheeellllllooo'
+
+```
+
+Function Example: Blackjack
+
+```python
+# given 3 ints between 1 and 11, if sum <=21, return sum
+# if sum > 21 and there's an 11, reduce total sum by 10
+# if sum exceeds 21, return BUST
+
+def blackjack(a,b,c):
+
+    if sum((a,b,c)) <= 21:
+        return sum((a,b,c))
+    elif sum((a,b,c)) <= 31 and 11 in (a,b,c):
+        return sum(a,b,c)) - 10
+    else:
+        return 'BUST'
+
+# call func to check
+
+blackjack(5,6,7)
+# 18
+
+blackjack(9,9,9)
+# 'BUST
+
+blackjack(9,9,11)
+# 19
+```
+
+Function Example: Summer of 69
+
+```python
+# return sum of numbers in array
+# but ignore sections starting with 6 and ending in 9
+
+def summer_69(arr):
+    total = 0
+    # placeholder for sums
+    
+    add = True
+    for num in arr:
+        while add:
+            if num!=6:
+                total += num
+                break
+            else:
+                add = False
+        while not add:
+            if num !=9:
+                break
+            else:
+                add = True 
+                break
+    return total
+
+```
+
+
 
 
 
