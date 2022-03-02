@@ -97,6 +97,16 @@
 8. [input](#op_input)
 
 ### 13. [List Comprehensions](#list_comprehension)
+1. [Square Numbers in Range](#list_comp_sq)
+2. [Check for even numbers](#list_comp_even)
+3. [Converting C to F](#list_comp_convert)
+4. [Nested List Comprehensions](#list_comp_nested)
+5. [Print words start with S](#list_comp_split)
+6. [Print all even numbers in range](#list_comp_even_print)
+7. [Return multiples of 3 in range](#list_comp_range_three)
+8. [Return words with even lengths](#list_comp_even_word)
+9. [Return words for multiples of 3](#list_comp_three_word)
+10. [Return first letter every word in string](#list_comp_first_letter)
 
 ### 14. [Guessing Game Challenge](#guessing_game)
 
@@ -2029,7 +2039,8 @@ list1
 # return x for every x in string 'word'
 ```
 
-square numbers in range and turn into list
+<a name="list_comp_sq"></a>
+### Square Numbers in Range
 
 ```python
 list2 = [x**2 for x in range(0,11)]
@@ -2039,7 +2050,8 @@ list2
 # return x**2 for every x in range 0-10
 ```
 
-if statement example
+<a name="list_comp_even"></a>
+### Check for even numbers
 
 ```python
 # check for even numbers in a range
@@ -2051,7 +2063,9 @@ list3
 # return x for every x in range 0-10, if x % 2 = 0
 # ie, return every even number
 ```
-converting celsius to fahrenheit
+
+<a name="list_comp_convert"></a>
+### Converting Celsius to Fahrenheit
 
 ```python
 # convert celsius to fahrenheit
@@ -2066,7 +2080,8 @@ fahrenheit
 # return variable 'temp' for every 'temp' in list celsius
 ```
 
-nested list comprehensions
+<a name="list_comp_nested"></a>
+### Nested List Comprehensions
 
 ```python
 list4 = [x**2 for x in [x**2 for x in range(11)]]
@@ -2081,11 +2096,12 @@ list4
 # 0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561, 10000
 ```
 
-Statements Assessment
-
-Use for, .split(), and if to create a Statement that will print out words that start with 's':
+<a name="list_comp_split"></a>
+### Print words that start with S
 
 ```python
+# Use for, .split(), and if to create a Statement that will print out words that start with 's':
+
 st = 'Print only the words that start with s in this sentence'
 
 for word in st.split()
@@ -2097,7 +2113,8 @@ for word in st.split()
 # sentence
 ```
 
-use range() to print all the even numbers from 0 to 10.
+<a name="list_comp_even_print"></a>
+### Print all even numbers in range
 
 ```python
 list(range(0,11,2))
@@ -2106,7 +2123,8 @@ list(range(0,11,2))
 # step 2 will automatically go from 0 to 2 and include all even numbers
 ```
 
-use list comprehension to create a list of all numbers between 1 and 50 that are divisble by 3
+<a name="list_comp_range_three"></a>
+### Return multiples of 3 in range
 
 ```python
 [x for x in range(1,51) if x%3 == 0]
@@ -2116,7 +2134,8 @@ use list comprehension to create a list of all numbers between 1 and 50 that are
 # x % 3 = 0 means every multiple of 3
 ```
 
-if the length of a word is even, print "even!"
+<a name="list_comp_even_word"></a>
+### Return words with even lengths
 
 ```python
 st = 'Print every word in this sentence that has an even number of letters'
@@ -2141,12 +2160,15 @@ of <-- has an even length!
 # print element (word) + string
 ```
 
-print integers from 1 to 100
-for multiples of 3, print "Fizz" instead of the number
-for multiples of 5, print "Buzz"
-for multiples of both 3 and 5, print "Fizzbuzz"
+<a name="list_comp_three_word"></a>
+### Return words for multiples of 3
 
 ```python
+# print integers from 1 to 100
+# for multiples of 3, print "Fizz" instead of the number
+# for multiples of 5, print "Buzz"
+# for multiples of both 3 and 5, print "Fizzbuzz"
+
 for num in range(1,101):
     if num % 3 == 0 and num % 5 == 0:
         print("Fizzbuzz")
@@ -2158,7 +2180,8 @@ for num in range(1,101):
         print(num)  
 ```
 
-use list comprehension to create a list of the first letter of every word in the string below
+<a name="list_comp_first_letter"></a>
+### Return first letter of every word in string
 
 ```python
 
@@ -2171,6 +2194,7 @@ st = 'Create a list of the first letters of every word in this string'
 # return variable index position 0 (word) for every variable (word) in split string
 # whole thing is encased with [ ] because you are returning a list
 ```
+
 <a name="guessing_game"></a>
 ## 🔴 14. Guessing Game Challenge
 [Top](#top)
