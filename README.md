@@ -1,15 +1,17 @@
 # Python Notes by Allen
 <a name="top"></a>
 
-### 1. [Basic Math & Variable Assignments](#basic_math)
-1. [Floor Division](#floor)
-2. [Modulo](#modulo)
-3. [Powers](#powers)
-4. [Square Root](#square_root)
-5. [Variable Assignment](#var_assign)
-6. [Variable Reassignment](#var_reassign)
-7. [Dynamic Typing](#dynamic_typing)
-8. [Datatypes](#datatypes)
+### 1. [Datatypes, Basic Math, and Variable Assignments](#section1)
+1. [Datatypes](#datatypes)
+2. [Basic Math](#basicmath)
+2. [Floor Division](#floor)
+3. [Modulo](#modulo)
+4. [Powers](#powers)
+5. [Square Root](#square_root)
+6. [Variable Assignment](#var_assign)
+7. [Variable Reassignment](#var_reassign)
+8. [Dynamic Typing](#dynamic_typing)
+
 
 ### 2. [Strings](#strings)
 1. [Types of Strings](#string_type)
@@ -123,9 +125,101 @@
 
 <hr>
 
-<a name="basic_math"></a>
-## 🔴 1. Basic Math & Variable Assignments
+<a name="section1"></a>
+## 🔴 1. Datatypes, Basic Math, and Variable Assignments
 [Top](#top)
+
+<a name="datatypes"></a>
+### 1. Datatypes
+
+```python
+Integers
+
+# type int
+# an int is a whole number, such as 2, 100, 300
+```
+
+```python
+Floating Point
+
+# type float
+# a float is a number with a decimal point, such as 2.3
+```
+
+```python
+Strings
+
+# type str
+# a string is an ordered sequence of characters
+# can be double or single quotes
+# "sammy"
+# 'hello'
+# "2000"
+```
+
+```python
+Lists
+
+# type list
+# a list is an ordered sequence of objects
+# can include various datatypes
+# [10, "hello", 200.3]
+```
+
+```python
+Tuple
+
+# type tup
+# a tuple is an ordered immutable sequence of objects
+# immutable means cannot change an object in the sequence
+# (10, "hello", 200.3)
+```
+
+```python
+Dictionaries
+
+# type dict
+# a dictionary is an unordered key:value pair
+# {"mykey":"value", "name","allen"}
+```
+
+```python
+Sets
+
+# type set
+# a set is an unordered collection of unique objects
+# {"a","b"}
+```
+
+```python
+Booleans
+
+# type bool
+# a boolean is a logical value indicating true or false
+```
+
+<a name="basicmath"></a>
+### 2. Basic Math
+
+```python
+Addition
+1+1
+
+# 2
+
+Subtraction
+3-1
+#2
+
+Multiplication
+2*2
+# 4
+
+Division
+
+6 / 2
+# 1.5
+```
 
 <a name="floor"></a>
 ### Floor Division
@@ -206,71 +300,7 @@ a += 10
 # initially assigned an int
 # reassigned as string
 ```
-<a name="datatypes"></a>
-### Datatypes
 
-```python
-Integers
-
-# type int
-# an int is a whole number, such as 2, 100, 300
-```
-
-```python
-Floating Point
-
-# type float
-# a float is a number with a decimal point, such as 2.3
-```
-
-```python
-Strings
-
-# type str
-# a string is an ordered sequence of characters
-# "sammy"
-# 'hello'
-# "2000"
-```
-
-```python
-Lists
-
-# type list
-# a list is an ordered sequence of objects
-# [10, "hello", 200.3]
-```
-
-```python
-Tuple
-
-# type tup
-# a tuple is an ordered immutable sequence of objects
-# (10, "hello", 200.3)
-```
-
-```python
-Dictionaries
-
-# type dict
-# a dictionary is an unordered key:value pair
-# {"mykey":"value", "name","allen"}
-```
-
-```python
-Sets
-
-# type set
-# a set is an unordered collection of unique objects
-# {"a","b"}
-```
-
-```python
-Booleans
-
-# type bool
-# a boolean is a logical value indicating true or false
-```
 
 <a name="strings"></a>
 ## 🔴 2. Strings
