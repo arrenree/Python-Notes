@@ -121,8 +121,6 @@
 6. [Return even numbers in list](#func_return_num)
 
 
-
-
 <hr>
 
 <a name="basic_math"></a>
@@ -212,14 +210,66 @@ a += 10
 ### Datatypes
 
 ```python
-# int (for integer)
-# float
-# str (for string)
-# list
-# tuple
-# dict (for dictionary)
-# set
-# bool (for Boolean True/False)
+Integers
+
+# type int
+# an int is a whole number, such as 2, 100, 300
+```
+
+```python
+Floating Point
+
+# type float
+# a float is a number with a decimal point, such as 2.3
+```
+
+```python
+Strings
+
+# type str
+# a string is an ordered sequence of characters
+# "sammy"
+# 'hello'
+# "2000"
+```
+
+```python
+Lists
+
+# type list
+# a list is an ordered sequence of objects
+# [10, "hello", 200.3]
+```
+
+```python
+Tuple
+
+# type tup
+# a tuple is an ordered immutable sequence of objects
+# (10, "hello", 200.3)
+```
+
+```python
+Dictionaries
+
+# type dict
+# a dictionary is an unordered key:value pair
+# {"mykey":"value", "name","allen"}
+```
+
+```python
+Sets
+
+# type set
+# a set is an unordered collection of unique objects
+# {"a","b"}
+```
+
+```python
+Booleans
+
+# type bool
+# a boolean is a logical value indicating true or false
 ```
 
 <a name="strings"></a>
