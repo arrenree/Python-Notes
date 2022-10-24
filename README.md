@@ -4,13 +4,13 @@
 ### 1. [Datatypes, Basic Math, and Variable Assignments](#section1)
 1. [Datatypes](#datatypes)
 2. [Basic Math](#basicmath)
-2. [Floor Division](#floor)
-3. [Modulo](#modulo)
-4. [Powers](#powers)
-5. [Square Root](#square_root)
-6. [Variable Assignment](#var_assign)
-7. [Variable Reassignment](#var_reassign)
-8. [Dynamic Typing](#dynamic_typing)
+3. [Floor Division](#floor)
+4. [Modulo](#modulo)
+5. [Powers](#powers)
+6. [Square Root](#square_root)
+7. [Variable Assignment](#var_assign)
+8. [Variable Reassignment](#var_reassign)
+9. [Dynamic Typing](#dynamic_typing)
 
 
 ### 2. [Strings](#strings)
@@ -204,7 +204,6 @@ Booleans
 ```python
 Addition
 1+1
-
 # 2
 
 Subtraction
@@ -216,48 +215,57 @@ Multiplication
 # 4
 
 Division
-
 6 / 2
 # 1.5
 ```
 
 <a name="floor"></a>
-### Floor Division
+### 3. Floor Division
 
 ```python
 7 // 4
 # 1
-# // = floor division. truncates decimal without rounding
+
+# // = floor division. 
+# truncates decimal without rounding
 # should be 1.75, but rounds to 1
 ```
 <a name="Modulo"></a>
-### Modulo
+### 4. Modulo or Mod
 
 ```python
 7 % 3
 # 3
+
 # % is mod = the remainder after division
 # useful in checking if number is even or odd
+
+50 % 5
+# 0
+# even number, since leftover is 0
 # if returns anything other than 0 = odd
 ```
+
 <a name="powers"></a>
-### Powers
+### 5. Powers
 
 ```python
 2 ** 3
 # 8
 ```
+
 <a name="square_root"></a>
-### Square Root
+### 6. Square Root
 
 ```python
 4 ** 0.5
 # 2.0
+
 # 4 to the power of 0.5 = square root
 # returns a float
 ```
 <a name="var_assign"></a>
-### Variable Assignments
+### 7. Variable Assignments
 
 ```python
 # cannot start with number
