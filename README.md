@@ -276,10 +276,10 @@ Division
 # avoid single characters
 ```
 
+```python
 Variable Assignment
 
-```python
-# create object called 'a' and assign it number 5
+# task: create object called 'a' and assign it number 5
 a = 5
 
 # name = object
@@ -287,7 +287,7 @@ a = 5
 ```
 
 <a name="var_reassign"></a>
-### Variable reassignments
+### 8. Variable Reassignments
 
 ```python
 a = 10
@@ -299,16 +299,28 @@ a = a + a
 a += 10
 # 30
 # same as a = a + 10
+
+type (a)
+int
+
+# to check what datatype variable a is, use type()
 ```
+
 <a name="dynamic_typing"></a>
-### Dynamic Typing
+### 9. Dynamic Typing
 
 ```python
 # python uses dynamic typing, which means you can reassign variables to different data types
-# initially assigned an int
-# reassigned as string
-```
 
+dogs = 2
+dogs = ["sammy","frankie"]
+
+# this is okay!
+# initially assigned dog to an int
+# reassigned as string
+
+# statically-typed means you can't re-assign variables
+```
 
 <a name="strings"></a>
 ## 🔴 2. Strings
@@ -317,19 +329,25 @@ a += 10
 ```python
 # strings are a sequence of characters using single or double qoutes
 # 'hello' "hello"
-# since its a sequence, can use indexing
+# since strings are ordered sequences, we can use indexing
 ```
+
 <a name="string_type"></a>
-### Types of Strings
+### 1. Types of Strings
 
 ```python
-'hello' # single word
-'this is also a string' # entire phrase
-"string with double quotes" # double quotes
+# single word strings
+'hello'
+
+# entire prhase strings
+'this is also a string'
+
+# double quotes
+"string with double quotes"
 ```
 
 <a name="string_print"></a>
-### Printing a String
+### 2. Printing a String
 
 ```python
 print("hello")
@@ -354,19 +372,20 @@ print("hello \t world")
 ```
 
 <a name="string_length"></a>
-### len()
+### 3. len()
 
 ```python
 len('hello world')
 # 11
+
 # use len to check length of a string
 ```
 
 <a name="string_indexing"></a>
-### String Indexing
+### 4. String Indexing
 
 ```python
-# strings are ordered sequences, which means we can use indexing or slicing to grab sub-sections
+# strings are ordered sequences, so can use indexing or slicing to grab sub-sections
 # indexing starts at 0
 # indexing uses [ ] and allows you to grab single characters
 # can also do reverse indexing -1
@@ -376,27 +395,30 @@ len('hello world')
 mystring = "Hello World"
 mystring[0]
 # H
+
+# retrieve object from index position 0 from string "hello world"
 ```
 
 ```python
 len(mystring)
 # 11
 
-# calc how many elements in string
+# how many elements are in string mystring
 ```
 
 ```python
+mystring = "Hello World"
 mystring[-2]
 # 'l'
 
 # negative indexing
+# retrieve object from index position -2 from mystring
 ```
 
 <a name="string_slicing"></a>
-### String Slicing
+### 5. String Slicing
 
 ```python
-# slicing
 # slicing allows you to grab multiple characters
 # syntax [ start:stop:step]
 # stop = index you go up to, but NOT include
@@ -430,7 +452,7 @@ mystring[::2]
 ```
 
 <a name="string_reverse"></a>
-### Reversing a String
+### 6. Reversing a String
 
 ```python
 # how do you reverse a string?
@@ -442,21 +464,23 @@ mystring[::-1]
 ```
 
 <a name="string_immut"></a>
-### String Immutability
+### 7. String Immutability
 
 ```python
 # strings are immutable. 
 # once a string is created, the elements within it cannot be changed or replaced
 # nor can it be re-assigned to something else
 
+# say you want to reassign s to p
 name = "Sam"
 name[0] = 'P'
 
 # error. you can't reassign the S to a P in a string
+# need to use concatenation
 ```
 
 <a name="string_con"></a>
-### String Concatention
+### 8. String Concatention
 
 ```python
 name = "Sam"
@@ -468,7 +492,7 @@ last_letters
 # 'Pam'
 
 # can use + to concatenate strings
-# extracted 'am' from the original 'Sam'
+# extracted 'am' from the original string 'Sam'
 # concatenated with 'P' to produce 'Pam'
 ```
 
@@ -485,7 +509,7 @@ letter * 10
 ```
 
 <a name="string_con_num"></a>
-### Concatenating Numbers with strings
+### 9. Concatenating Numbers with strings
 
 ```python
 # you will get an error if concatenate numbers with string
@@ -499,7 +523,7 @@ letter * 10
 ```
 
 <a name="string_methods"></a>
-### String Methods
+### 10. String Methods
 
 ```python
 # objects in python have built in methods
